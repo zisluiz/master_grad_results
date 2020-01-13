@@ -1,0 +1,12 @@
+=== Start time: 09-Jan-2020 17:16:33
+=== Mean GPU Usage Percent: 0
+=== Mean GPU Mem Usage (MB): 0
+=== Mean cpu 1 usage: 0
+=== Mean cpu 2 usage: 0
+=== Mean cpu 3 usage: 0
+=== Mean cpu 4 usage: 0
+=== Mean memory usage (MB): 0
+=== Total image predicted: 4
+=== Seconds per image: 9.119184e+02
+=== Max num threads: 0
+=== End time: 09-Jan-2020 18:17:20

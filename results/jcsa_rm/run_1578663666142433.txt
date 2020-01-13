@@ -1,0 +1,2 @@
+=== Start time: 10-Jan-2020 13:41:06
+=== Total image predicted: 1

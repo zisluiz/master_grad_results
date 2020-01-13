@@ -1,0 +1,3 @@
+Start time: 2019-12-28 21:50:50.493203
+GPU Usage Percent: 86
+GPU Mem Usage (MB)): 2300.837888
