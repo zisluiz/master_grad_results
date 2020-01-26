@@ -1,0 +1,4 @@
+=== Start time: 18-Jan-2020 21:36:00
+=== Total image predicted: 75
+=== Seconds per image: 4.411257e+02
+=== End time: 19-Jan-2020 06:47:25
