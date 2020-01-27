@@ -80,197 +80,73 @@ def evaluate(pred, gt):
     return totalAccuracy, totalPrec, totalRec, totalF1, totalIou
 
 
+def check_pixel_close_region(pred, region, x1, y1, x2, y2):
+    if x2 > - 1 and x2 < len(pred) and y2 > -1 and y2 < len(pred[0]) and pred[x2][y2] != -1:
+        dist = math.hypot(x1 - x2, y1 - y2)
+        if abs(dist) <= MAX_DISTANCE:
+            return True
+
+    return False
+
+
 def split_classes_to_regions(pred):
-    pred = pred.copy()
-    predWithRegions = np.zeros((pred.shape[0], pred.shape[1], 3), dtype=int)
-
-    unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 1)})[:, 0]
-    countColor = 0
-    for i, region in enumerate(unique_pixels):
-        indices = np.where(pred == region)
-        print("Processing region "+str(i)+", "+str(len(indices[0]))+" points")
-        exist_unregion_pixels = True
-
-        while exist_unregion_pixels:
-            groupIndices = [[], []]
-            x1 = -1
-            startColor = (randrange(256), randrange(256), randrange(256))
-            countColor += 1
-            tryCount = -1
-            newGroupIndices = [[], []]
-
-            #verify three times closely pixels
-            #for t in range(6):
-            restartOnFoundClosePixel = True
-            while restartOnFoundClosePixel:
-                restartOnFoundClosePixel = False
-                found_pixels = False
-                tryCount += 1
-
-                if tryCount > 1:
-                    groupIndices = newGroupIndices
-                    newGroupIndices = [[], []]
-                    tryCount = 1
-
-                indices = [np.delete(indices[0], np.argwhere(indices[0] == -1)),
-                           np.delete(indices[1], np.argwhere(indices[1] == -1))]
-
-                for j in range(len(indices[0])):
-                    if indices[0][j] == -1:
-                        continue
-
-                    found_pixels = True
-                    if x1 == -1:
-                        x1 = indices[0][j]
-                        y1 = indices[1][j]
-                        groupIndices[0].append(x1)
-                        groupIndices[1].append(y1)
-
-                        if not np.array_equal(predWithRegions[x1][y1][:], [0, 0, 0]):
-                            raise Exception('Pixel already processed')
-                        predWithRegions[x1][y1] = startColor
-                        indices[0][j] = -1
-                        indices[1][j] = -1
-                    else:
-                        x2 = indices[0][j]
-                        y2 = indices[1][j]
-
-                        isClosest = False
-
-                        for k in range(len(groupIndices[0])):
-                            x1 = groupIndices[0][k]
-                            y1 = groupIndices[1][k]
-
-                            #dist = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-                            dist = math.hypot(x1 - x2, y1 - y2)
-                            if abs(dist) <= MAX_DISTANCE:
-                                #print("dist: "+str(dist)+" - ("+str(x1)+","+str(y1)+"),("+str(x2)+","+str(y2)+")")
-                                isClosest = True
-                                break
-
-                        if isClosest:
-                            groupIndices[0].insert(0, x2)
-                            groupIndices[1].insert(0, y2)
-                            newGroupIndices[0].append(x2)
-                            newGroupIndices[1].append(y2)
-
-                            if not np.array_equal(predWithRegions[x2][y2][:], [0, 0, 0]):
-                                raise Exception('Pixel already processed')
-
-                            predWithRegions[x2][y2] = startColor
-                            indices[0][j] = -1
-                            indices[1][j] = -1
-                            restartOnFoundClosePixel = True #back to start
-                            #break
-
-            exist_unregion_pixels = found_pixels
-
-    for x in range(len(predWithRegions[0])):
-        for y in range(len(predWithRegions[:,0])):
-            if np.array_equal(predWithRegions[x][y][:], [0, 0, 0]):
-                raise Exception('Exist pixel not visited.')
-
-    print("Finished, colors used: " + str(countColor) + ".")
-    return predWithRegions
-
-
-def split_classes_to_regions2(pred):
-    pred = pred.copy()
+    pred = pred.copy().astype(int)
     predWithRegions = np.zeros((pred.shape[0], pred.shape[1], 3), dtype=int)
     exist_unregion_pixels = True
+    countColor = 0
     while exist_unregion_pixels:
         exist_unregion_pixels = False
+        region = None
+        startColor = (randrange(256), randrange(256), randrange(256))
+        pointsToVisit = []
+        countColor += 1
 
-        for x in range(len(pred[0])):
-            for y in range(len(pred[:,0])):
+        for i in range(len(pred[0])):
+            for j in range(len(pred[:,0])):
+                if pred[i][j] != -1:
+                    pointsToVisit.append([i, j])
+                    region = pred[i][j]
+                    exist_unregion_pixels = True
+                    break
+            if exist_unregion_pixels:
+                break
 
+        while len(pointsToVisit) > 0:
+            point = pointsToVisit.pop()
+            x = point[0]
+            y = point[1]
 
-    print("Finished, colors used: " + str(countColor) + ".")
-    return predWithRegions
+            if pred[x][y] == region:
+                predWithRegions[x][y] = startColor
+                pred[x][y] = -1
 
-
-
-    unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 1)})[:, 0]
-    countColor = 0
-    for i, region in enumerate(unique_pixels):
-        indices = np.where(pred == region)
-        print("Processing region "+str(i)+", "+str(len(indices[0]))+" points")
-        exist_unregion_pixels = True
-
-        while exist_unregion_pixels:
-            groupIndices = [[], []]
-            x1 = -1
-            startColor = (randrange(256), randrange(256), randrange(256))
-            countColor += 1
-            tryCount = -1
-            newGroupIndices = [[], []]
-
-            #verify three times closely pixels
-            #for t in range(6):
-            restartOnFoundClosePixel = True
-            while restartOnFoundClosePixel:
-                restartOnFoundClosePixel = False
-                found_pixels = False
-                tryCount += 1
-
-                if tryCount > 1:
-                    groupIndices = newGroupIndices
-                    newGroupIndices = [[], []]
-                    tryCount = 1
-
-                indices = [np.delete(indices[0], np.argwhere(indices[0] == -1)),
-                           np.delete(indices[1], np.argwhere(indices[1] == -1))]
-
-                for j in range(len(indices[0])):
-                    if indices[0][j] == -1:
-                        continue
-
-                    found_pixels = True
-                    if x1 == -1:
-                        x1 = indices[0][j]
-                        y1 = indices[1][j]
-                        groupIndices[0].append(x1)
-                        groupIndices[1].append(y1)
-
-                        if not np.array_equal(predWithRegions[x1][y1][:], [0, 0, 0]):
-                            raise Exception('Pixel already processed')
-                        predWithRegions[x1][y1] = startColor
-                        indices[0][j] = -1
-                        indices[1][j] = -1
-                    else:
-                        x2 = indices[0][j]
-                        y2 = indices[1][j]
-
-                        isClosest = False
-
-                        for k in range(len(groupIndices[0])):
-                            x1 = groupIndices[0][k]
-                            y1 = groupIndices[1][k]
-
-                            #dist = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-                            dist = math.hypot(x1 - x2, y1 - y2)
-                            if abs(dist) <= MAX_DISTANCE:
-                                #print("dist: "+str(dist)+" - ("+str(x1)+","+str(y1)+"),("+str(x2)+","+str(y2)+")")
-                                isClosest = True
-                                break
-
-                        if isClosest:
-                            groupIndices[0].insert(0, x2)
-                            groupIndices[1].insert(0, y2)
-                            newGroupIndices[0].append(x2)
-                            newGroupIndices[1].append(y2)
-
-                            if not np.array_equal(predWithRegions[x2][y2][:], [0, 0, 0]):
-                                raise Exception('Pixel already processed')
-
-                            predWithRegions[x2][y2] = startColor
-                            indices[0][j] = -1
-                            indices[1][j] = -1
-                            restartOnFoundClosePixel = True #back to start
-                            #break
-
-            exist_unregion_pixels = found_pixels
-
+                for i in range(-MAX_DISTANCE, MAX_DISTANCE + 1, 1):
+                    for j in range(-MAX_DISTANCE, MAX_DISTANCE + 1, 1):
+                        if i != 0 or j != 0:
+                            if check_pixel_close_region(pred, region, x, y, x + i, y + j):
+                                pointsToVisit.append([x + i, y + j])
+                    """
+                    if check_pixel_close_region(pred, region, x, y, x - i, y - i):
+                        pointsToVisit.append([x - i, y - i])
+                    if check_pixel_close_region(pred, region, x, y, x + i, y + i):
+                        pointsToVisit.append([x + i, y + i])                        
+                    if check_pixel_close_region(pred, region, x, y, x - 1, y - 1):
+                        pointsToVisit.append([x - 1, y - 1])
+                    if check_pixel_close_region(pred, region, x, y, x, y - 1):
+                        pointsToVisit.append([x, y - 1])
+                    if check_pixel_close_region(pred, region, x, y, x+1, y - 1):
+                        pointsToVisit.append([x+1, y - 1])
+                    if check_pixel_close_region(pred, region, x, y, x - 1, y):
+                        pointsToVisit.append([x - 1, y])
+                    if check_pixel_close_region(pred, region, x, y, x+1, y):
+                        pointsToVisit.append([x+1, y])
+                    if check_pixel_close_region(pred, region, x, y, x - 1, y + 1):
+                        pointsToVisit.append([x - 1, y + 1])
+                    if check_pixel_close_region(pred, region, x, y, x, y + 1):
+                        pointsToVisit.append([x, y + 1])
+                    if check_pixel_close_region(pred, region, x, y, x + 1, y + 1):
+                        pointsToVisit.append([x + 1, y + 1])
+"""
     for x in range(len(predWithRegions[0])):
         for y in range(len(predWithRegions[:,0])):
             if np.array_equal(predWithRegions[x][y][:], [0, 0, 0]):

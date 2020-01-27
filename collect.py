@@ -177,6 +177,8 @@ for method in methods:
                 pred_regions = pred;
                 if isClassPrediction:
                     pred_regions = region_evaluation.split_classes_to_regions(pred)
+                    if not os.path.exists('tests/' + datasetName):
+                        os.makedirs('tests/' + datasetName)
                     cv2.imwrite('tests/' + datasetName + '/region_' + imageName, pred_regions)
 
                 accuracy, prec, rec, f1, iou = region_evaluation.evaluate(pred_regions, gt)
