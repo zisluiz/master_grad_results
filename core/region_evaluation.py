@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 import math
 from random import randrange
-CLASS_VALUE = 255
+CLASS_VALUE = 1#255
 OUT_CLASS_VALUE = 0
 MAX_DISTANCE = 1
 
@@ -63,8 +63,8 @@ def evaluate(pred, gt):
         #cv2.imwrite('tests/'+str(i)+'_croppedPred_normalized.png', croppedPred)
         #cv2.imwrite('tests/'+str(i)+'_croppedGt_normalized.png', croppedGt)
 
-        #accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(croppedPred, croppedGt, 2, score_averaging="weighted")
-        accuracy, class_accuracies, prec, rec, f1, iou = 0,0,0,0,0,0
+        accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(croppedPred, croppedGt, 2, score_averaging="weighted")
+        #accuracy, class_accuracies, prec, rec, f1, iou = 0,0,0,0,0,0
         totalAccuracy += accuracy
         totalPrec += prec
         totalRec += rec
@@ -125,28 +125,7 @@ def split_classes_to_regions(pred):
                         if i != 0 or j != 0:
                             if check_pixel_close_region(pred, region, x, y, x + i, y + j):
                                 pointsToVisit.append([x + i, y + j])
-                    """
-                    if check_pixel_close_region(pred, region, x, y, x - i, y - i):
-                        pointsToVisit.append([x - i, y - i])
-                    if check_pixel_close_region(pred, region, x, y, x + i, y + i):
-                        pointsToVisit.append([x + i, y + i])                        
-                    if check_pixel_close_region(pred, region, x, y, x - 1, y - 1):
-                        pointsToVisit.append([x - 1, y - 1])
-                    if check_pixel_close_region(pred, region, x, y, x, y - 1):
-                        pointsToVisit.append([x, y - 1])
-                    if check_pixel_close_region(pred, region, x, y, x+1, y - 1):
-                        pointsToVisit.append([x+1, y - 1])
-                    if check_pixel_close_region(pred, region, x, y, x - 1, y):
-                        pointsToVisit.append([x - 1, y])
-                    if check_pixel_close_region(pred, region, x, y, x+1, y):
-                        pointsToVisit.append([x+1, y])
-                    if check_pixel_close_region(pred, region, x, y, x - 1, y + 1):
-                        pointsToVisit.append([x - 1, y + 1])
-                    if check_pixel_close_region(pred, region, x, y, x, y + 1):
-                        pointsToVisit.append([x, y + 1])
-                    if check_pixel_close_region(pred, region, x, y, x + 1, y + 1):
-                        pointsToVisit.append([x + 1, y + 1])
-"""
+
     for x in range(len(predWithRegions[0])):
         for y in range(len(predWithRegions[:,0])):
             if np.array_equal(predWithRegions[x][y][:], [0, 0, 0]):

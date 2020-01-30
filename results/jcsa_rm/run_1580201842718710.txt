@@ -1,0 +1,752 @@
+=== Start time: 28-Jan-2020 08:57:22
+top - 09:01:42 up 11:30,  1 user,  load average: 1.29, 1.14, 0.53
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 25.8 us,  2.2 sis,  0.0 ni, 72.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9857616 livre,  3400764 usados,  3079020 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12571148 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8327388 2.423g 346996 S   0.0 15.5 771:56.02 MATLAB                      
+
+
+top - 09:04:39 up 11:33,  1 user,  load average: 2.00, 1.72, 0.88
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 25.9 us,  2.2 sis,  0.0 ni, 71.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9846808 livre,  3402004 usados,  3088588 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12569904 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.424g 347224 S   0.0 15.6 779:28.56 MATLAB                      
+
+
+top - 09:05:56 up 11:34,  1 user,  load average: 2.32, 1.91, 1.02
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.0 us,  2.2 sis,  0.0 ni, 71.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9776964 livre,  3463524 usados,  3096912 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12508384 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.483g 347224 S  40.0 15.9 782:49.02 MATLAB                      
+
+
+top - 09:07:33 up 11:36,  1 user,  load average: 2.69, 2.18, 1.20
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.0 us,  2.2 sis,  0.0 ni, 71.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9768408 livre,  3463592 usados,  3105400 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12508312 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.482g 347224 S  20.0 15.9 786:57.88 MATLAB                      
+
+
+top - 09:08:57 up 11:37,  1 user,  load average: 2.21, 2.19, 1.30
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.1 us,  2.2 sis,  0.0 ni, 71.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9821480 livre,  3402360 usados,  3113560 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12569548 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.423g 347224 S   0.0 15.6 790:36.09 MATLAB                      
+
+
+top - 09:19:43 up 11:48,  1 user,  load average: 2.38, 2.63, 2.03
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.7 us,  2.3 sis,  0.0 ni, 71.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9747924 livre,  3464856 usados,  3124620 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12507048 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.483g 347404 S   0.0 15.9 820:27.40 MATLAB                      
+
+
+top - 09:23:02 up 11:51,  1 user,  load average: 2.33, 2.63, 2.17
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.8 us,  2.3 sis,  0.0 ni, 70.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9799840 livre,  3403628 usados,  3133932 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12568276 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.424g 347404 S  60.0 15.6 828:31.87 MATLAB                      
+
+
+top - 09:24:56 up 11:53,  1 user,  load average: 2.27, 2.54, 2.19
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 26.9 us,  2.3 sis,  0.0 ni, 70.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9790912 livre,  3403888 usados,  3142600 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12568020 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.425g 347404 S   0.0 15.6 833:37.62 MATLAB                      
+
+
+top - 09:28:15 up 11:57,  1 user,  load average: 2.49, 2.70, 2.34
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 27.0 us,  2.3 sis,  0.0 ni, 70.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9720108 livre,  3465672 usados,  3151620 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12506232 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.484g 347404 S   0.0 15.9 842:29.33 MATLAB                      
+
+
+top - 09:29:37 up 11:58,  1 user,  load average: 2.65, 2.69, 2.36
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 27.1 us,  2.3 sis,  0.0 ni, 70.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9773064 livre,  3404016 usados,  3160320 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12567892 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.425g 347404 S   0.0 15.6 846:03.86 MATLAB                      
+
+
+top - 09:46:56 up 12:15,  1 user,  load average: 2.64, 2.85, 2.76
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 28.0 us,  2.4 sis,  0.0 ni, 69.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9756244 livre,  3409208 usados,  3171948 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12562696 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.426g 347404 S   0.0 15.6 894:19.98 MATLAB                      
+
+
+top - 10:22:22 up 12:51,  1 user,  load average: 2.60, 2.79, 2.89
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 29.7 us,  2.5 sis,  0.0 ni, 67.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9739772 livre,  3411124 usados,  3186504 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12560780 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S  33.3 15.6 996:11.22 MATLAB                      
+
+
+top - 10:23:34 up 12:52,  1 user,  load average: 2.53, 2.73, 2.86
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 29.8 us,  2.5 sis,  0.0 ni, 67.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9733200 livre,  3410608 usados,  3193592 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12561304 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.427g 347404 S   6.7 15.6 999:22.07 MATLAB                      
+
+
+top - 10:28:46 up 12:57,  1 user,  load average: 2.11, 2.47, 2.72
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 29.9 us,  2.5 sis,  0.0 ni, 67.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9724264 livre,  3410336 usados,  3202800 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12561576 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.427g 347404 S   0.0 15.6   1011:32 MATLAB                      
+
+
+top - 10:30:41 up 12:59,  1 user,  load average: 2.42, 2.51, 2.71
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.0 us,  2.5 sis,  0.0 ni, 67.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9713808 livre,  3412420 usados,  3211172 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559496 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1016:32 MATLAB                      
+
+
+top - 10:32:03 up 13:00,  1 user,  load average: 2.67, 2.63, 2.74
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.1 us,  2.5 sis,  0.0 ni, 67.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9703884 livre,  3413416 usados,  3220100 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12558488 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1020:09 MATLAB                      
+
+
+top - 10:34:57 up 13:03,  1 user,  load average: 3.28, 2.92, 2.84
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.2 us,  2.6 sis,  0.0 ni, 67.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9634304 livre,  3474624 usados,  3228472 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12497292 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.488g 347404 S   0.0 16.0   1028:09 MATLAB                      
+
+
+top - 10:36:15 up 13:05,  1 user,  load average: 2.81, 2.89, 2.83
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.2 us,  2.6 sis,  0.0 ni, 67.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9686920 livre,  3413772 usados,  3236708 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12558152 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   6.7 15.6   1031:43 MATLAB                      
+
+
+top - 10:38:05 up 13:06,  1 user,  load average: 2.48, 2.77, 2.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.3 us,  2.6 sis,  0.0 ni, 67.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9678488 livre,  3412684 usados,  3246228 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559232 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S   0.0 15.6   1036:26 MATLAB                      
+
+
+top - 10:40:29 up 13:09,  1 user,  load average: 2.43, 2.76, 2.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.4 us,  2.6 sis,  0.0 ni, 67.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9669156 livre,  3413328 usados,  3254916 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12558592 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S   0.0 15.6   1042:11 MATLAB                      
+
+
+top - 10:49:14 up 13:18,  1 user,  load average: 2.31, 2.76, 2.83
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.7 us,  2.6 sis,  0.0 ni, 66.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9658108 livre,  3412760 usados,  3266532 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559156 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S   0.0 15.6   1065:42 MATLAB                      
+
+
+top - 10:51:29 up 13:20,  1 user,  load average: 2.23, 2.60, 2.77
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.8 us,  2.6 sis,  0.0 ni, 66.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9649760 livre,  3412756 usados,  3274884 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559164 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S   0.0 15.6   1071:15 MATLAB                      
+
+
+top - 10:53:03 up 13:21,  1 user,  load average: 2.44, 2.60, 2.75
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.8 us,  2.6 sis,  0.0 ni, 66.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9641528 livre,  3412772 usados,  3283100 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559144 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S  60.0 15.6   1075:27 MATLAB                      
+
+
+top - 10:54:46 up 13:23,  1 user,  load average: 3.34, 2.95, 2.87
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.9 us,  2.7 sis,  0.0 ni, 66.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9632212 livre,  3413668 usados,  3291520 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12558252 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1079:47 MATLAB                      
+
+
+top - 10:56:13 up 13:25,  1 user,  load average: 2.70, 2.90, 2.86
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 30.9 us,  2.7 sis,  0.0 ni, 66.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9624476 livre,  3412844 usados,  3300080 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12559076 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.428g 347404 S  40.0 15.6   1083:51 MATLAB                      
+
+
+top - 10:59:40 up 13:28,  1 user,  load average: 2.08, 2.57, 2.74
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.1 us,  2.7 sis,  0.0 ni, 66.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9612804 livre,  3414332 usados,  3310264 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12557584 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1093:25 MATLAB                      
+
+
+top - 11:01:27 up 13:30,  1 user,  load average: 3.36, 2.87, 2.84
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.1 us,  2.7 sis,  0.0 ni, 66.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9604472 livre,  3414272 usados,  3318656 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12557648 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1098:15 MATLAB                      
+
+
+top - 11:02:36 up 13:31,  1 user,  load average: 2.45, 2.72, 2.79
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.2 us,  2.7 sis,  0.0 ni, 66.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9554368 livre,  3455408 usados,  3327624 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12516508 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393224 2.468g 347404 S   6.7 15.8   1101:22 MATLAB                      
+
+
+top - 11:03:58 up 13:32,  1 user,  load average: 2.74, 2.76, 2.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.2 us,  2.7 sis,  0.0 ni, 66.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9586676 livre,  3414412 usados,  3336312 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12557508 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   6.7 15.6   1104:54 MATLAB                      
+
+
+top - 11:05:21 up 13:34,  1 user,  load average: 2.38, 2.66, 2.76
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.3 us,  2.7 sis,  0.0 ni, 66.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9577884 livre,  3414488 usados,  3345028 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12557432 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1108:43 MATLAB                      
+
+
+top - 11:08:36 up 13:37,  1 user,  load average: 2.14, 2.44, 2.66
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.3 us,  2.7 sis,  0.0 ni, 65.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9562428 livre,  3418344 usados,  3356628 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12553572 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.429g 347404 S   0.0 15.6   1116:33 MATLAB                      
+
+
+top - 11:10:10 up 13:38,  1 user,  load average: 2.39, 2.48, 2.66
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.4 us,  2.7 sis,  0.0 ni, 65.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9553964 livre,  3418196 usados,  3365240 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12553724 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.430g 347404 S   0.0 15.6   1120:40 MATLAB                      
+
+
+top - 11:11:56 up 13:40,  1 user,  load average: 3.18, 2.69, 2.71
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.5 us,  2.7 sis,  0.0 ni, 65.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9482516 livre,  3479640 usados,  3375244 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12492280 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8413728 2.488g 347404 S  26.7 16.0   1125:27 MATLAB                      
+
+
+top - 11:16:31 up 13:45,  1 user,  load average: 2.72, 2.89, 2.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.6 us,  2.8 sis,  0.0 ni, 65.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9492264 livre,  3461260 usados,  3383876 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12510660 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393224 2.471g 347404 S   0.0 15.9   1138:07 MATLAB                      
+
+
+top - 11:18:32 up 13:47,  1 user,  load average: 2.00, 2.64, 2.73
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 31.7 us,  2.8 sis,  0.0 ni, 65.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9524496 livre,  3420212 usados,  3392692 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12551704 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.432g 347404 S   0.0 15.6   1143:13 MATLAB                      
+
+
+top - 11:55:49 up 14:24,  1 user,  load average: 2.44, 2.92, 3.03
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 33.2 us,  2.8 sis,  0.0 ni, 64.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9496904 livre,  3428408 usados,  3412088 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12543496 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.435g 347404 S   0.0 15.6   1249:20 MATLAB                      
+
+
+top - 12:33:16 up 15:02,  1 user,  load average: 2.34, 3.13, 3.16
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 34.5 us,  2.9 sis,  0.0 ni, 62.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9482532 livre,  3429268 usados,  3425600 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12542656 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352216 2.436g 347404 S   0.0 15.6   1355:58 MATLAB                      
+
+
+top - 12:43:31 up 15:12,  1 user,  load average: 2.80, 2.88, 3.05
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 34.8 us,  2.9 sis,  0.0 ni, 62.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9433616 livre,  3469508 usados,  3434276 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12502416 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393224 2.474g 347404 S   6.7 15.9   1384:14 MATLAB                      
+
+
+top - 13:21:26 up 15:50,  1 user,  load average: 2.78, 3.22, 3.22
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 36.1 us,  3.0 sis,  0.0 ni, 60.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9419384 livre,  3469824 usados,  3448192 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12502100 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393224 2.472g 347404 S   0.0 15.9   1491:33 MATLAB                      
+
+
+top - 13:58:56 up 16:27,  1 user,  load average: 2.52, 2.86, 3.10
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 37.2 us,  3.0 sis,  0.0 ni, 59.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9404400 livre,  3469796 usados,  3463204 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12502128 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393224 2.472g 347404 S   6.7 15.9   1598:08 MATLAB                      
+
+top - 14:27:29 up 16:56,  1 user,  load average: 2.66, 1.53, 1.35
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 36.7 us,  3.0 sis,  0.0 ni, 60.3 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9403428 livre,  3446708 usados,  3487264 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12525220 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8352992 2.445g 347444 S   0.0 15.7   1623:05 MATLAB                      
+
+
+top - 14:33:21 up 17:02,  1 user,  load average: 2.55, 2.38, 1.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 36.9 us,  3.0 sis,  0.0 ni, 60.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9321820 livre,  3514996 usados,  3500584 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12456936 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.511g 347676 S  33.3 16.1   1639:17 MATLAB                      
+
+
+top - 14:35:11 up 17:04,  1 user,  load average: 2.50, 2.46, 1.90
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 36.9 us,  3.0 sis,  0.0 ni, 60.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9372796 livre,  3453860 usados,  3510744 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12518076 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.451g 347676 S  66.7 15.7   1644:20 MATLAB                      
+
+
+top - 14:37:04 up 17:05,  1 user,  load average: 2.69, 2.59, 2.01
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 36.9 us,  3.0 sis,  0.0 ni, 60.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9360008 livre,  3454204 usados,  3523188 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12517728 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.452g 347676 S  56.2 15.7   1649:24 MATLAB                      
+
+
+top - 14:38:51 up 17:07,  1 user,  load average: 2.31, 2.56, 2.07
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 37.0 us,  3.0 sis,  0.0 ni, 60.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9349188 livre,  3454424 usados,  3533788 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12517508 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.452g 347676 S   0.0 15.7   1654:02 MATLAB                      
+
+
+top - 15:15:18 up 17:44,  1 user,  load average: 3.11, 3.05, 2.97
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.0 us,  3.1 sis,  0.0 ni, 58.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9294576 livre,  3491888 usados,  3550936 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12480040 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8393332 2.485g 347676 S   0.0 15.9   1758:30 MATLAB                      
+
+
+top - 15:16:53 up 17:45,  1 user,  load average: 2.36, 2.81, 2.89
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.0 us,  3.1 sis,  0.0 ni, 58.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9317004 livre,  3459988 usados,  3560408 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12511936 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S  13.3 15.8   1762:33 MATLAB                      
+
+
+top - 15:24:35 up 17:53,  1 user,  load average: 3.53, 3.25, 3.08
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.2 us,  3.1 sis,  0.0 ni, 58.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9304732 livre,  3460144 usados,  3572524 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12511784 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   6.7 15.8   1783:51 MATLAB                      
+
+
+top - 15:26:44 up 17:55,  1 user,  load average: 2.26, 2.92, 2.99
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.2 us,  3.1 sis,  0.0 ni, 58.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9293648 livre,  3460496 usados,  3583256 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12511436 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1789:38 MATLAB                      
+
+
+top - 15:28:02 up 17:56,  1 user,  load average: 2.45, 2.85, 2.96
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.3 us,  3.1 sis,  0.0 ni, 58.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9282068 livre,  3460532 usados,  3594800 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12511396 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1793:12 MATLAB                      
+
+
+top - 15:29:17 up 17:58,  1 user,  load average: 2.76, 2.80, 2.93
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.3 us,  3.1 sis,  0.0 ni, 58.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9272380 livre,  3460456 usados,  3604564 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12511476 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1796:28 MATLAB                      
+
+
+top - 15:30:13 up 17:59,  1 user,  load average: 3.03, 2.91, 2.96
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.3 us,  3.1 sis,  0.0 ni, 58.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9261840 livre,  3461264 usados,  3614296 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12510672 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   6.7 15.8   1799:09 MATLAB                      
+
+
+top - 15:31:10 up 17:59,  1 user,  load average: 2.34, 2.76, 2.91
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.3 us,  3.1 sis,  0.0 ni, 58.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9190532 livre,  3522504 usados,  3624364 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12449432 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.514g 347676 S   0.0 16.1   1801:48 MATLAB                      
+
+
+top - 15:32:21 up 18:01,  1 user,  load average: 3.28, 2.96, 2.97
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.4 us,  3.1 sis,  0.0 ni, 58.5 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9180332 livre,  3522508 usados,  3634560 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12449428 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.514g 347676 S   0.0 16.1   1804:58 MATLAB                      
+
+
+top - 15:34:57 up 18:03,  1 user,  load average: 3.10, 3.05, 3.01
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.4 us,  3.1 sis,  0.0 ni, 58.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9170620 livre,  3522264 usados,  3644516 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12449676 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.514g 347676 S   6.7 16.1   1811:59 MATLAB                      
+
+
+top - 15:36:04 up 18:04,  1 user,  load average: 3.10, 3.08, 3.02
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.4 us,  3.1 sis,  0.0 ni, 58.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9180672 livre,  3502128 usados,  3654600 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12469812 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8402444 2.494g 347676 S   0.0 16.0   1815:00 MATLAB                      
+
+
+top - 15:36:59 up 18:05,  1 user,  load average: 2.97, 3.08, 3.03
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.4 us,  3.1 sis,  0.0 ni, 58.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9149920 livre,  3523220 usados,  3664260 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12448720 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.514g 347676 S   0.0 16.1   1817:36 MATLAB                      
+
+
+top - 15:38:00 up 18:06,  1 user,  load average: 3.33, 3.17, 3.06
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.5 us,  3.1 sis,  0.0 ni, 58.4 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9139844 livre,  3522716 usados,  3674840 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12449220 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8422948 2.513g 347676 S   0.0 16.1   1820:25 MATLAB                      
+
+
+top - 15:39:08 up 18:07,  1 user,  load average: 2.60, 3.01, 3.02
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.5 us,  3.1 sis,  0.0 ni, 58.3 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9191116 livre,  3461444 usados,  3684840 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12510492 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   6.2 15.8   1823:34 MATLAB                      
+
+
+top - 15:40:25 up 18:09,  1 user,  load average: 2.90, 3.02, 3.02
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.5 us,  3.1 sis,  0.0 ni, 58.3 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9180296 livre,  3461956 usados,  3695148 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12509984 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1827:14 MATLAB                      
+
+
+top - 15:41:24 up 18:10,  1 user,  load average: 2.59, 2.91, 2.98
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.5 us,  3.2 sis,  0.0 ni, 58.3 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9169848 livre,  3462156 usados,  3705396 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12509784 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1829:58 MATLAB                      
+
+
+top - 15:42:32 up 18:11,  1 user,  load average: 2.68, 2.87, 2.96
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.6 us,  3.2 sis,  0.0 ni, 58.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9159292 livre,  3462428 usados,  3715680 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12509508 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1833:05 MATLAB                      
+
+
+top - 15:44:05 up 18:12,  1 user,  load average: 2.34, 2.80, 2.94
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.6 us,  3.2 sis,  0.0 ni, 58.2 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9148776 livre,  3462356 usados,  3726268 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12509576 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.455g 347676 S   0.0 15.8   1837:03 MATLAB                      
+
+
+top - 15:47:06 up 18:15,  1 user,  load average: 2.56, 2.78, 2.91
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.7 us,  3.2 sis,  0.0 ni, 58.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9133756 livre,  3465264 usados,  3738380 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12506676 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.457g 348016 S   0.0 15.8   1845:27 MATLAB                      
+
+
+top - 15:48:32 up 18:17,  1 user,  load average: 2.39, 2.72, 2.88
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.7 us,  3.2 sis,  0.0 ni, 58.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9122960 livre,  3464836 usados,  3749604 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12507104 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.457g 348016 S   6.7 15.8   1849:20 MATLAB                      
+
+
+top - 15:50:32 up 18:19,  1 user,  load average: 2.88, 2.87, 2.92
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.7 us,  3.2 sis,  0.0 ni, 58.1 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9111252 livre,  3465420 usados,  3760728 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12506520 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.457g 348016 S  33.3 15.8   1854:41 MATLAB                      
+
+
+top - 15:53:09 up 18:21,  1 user,  load average: 3.08, 3.02, 2.97
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.8 us,  3.2 sis,  0.0 ni, 58.0 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9099700 livre,  3465548 usados,  3772152 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12506388 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.458g 348016 S   0.0 15.8   1861:52 MATLAB                      
+
+
+top - 15:59:02 up 18:27,  1 user,  load average: 2.24, 2.80, 2.92
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 38.9 us,  3.2 sis,  0.0 ni, 57.9 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9085084 livre,  3465780 usados,  3786536 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12506156 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.458g 348016 S   0.0 15.8   1878:25 MATLAB                      
+
+
+top - 16:00:28 up 18:29,  1 user,  load average: 2.65, 2.82, 2.91
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.0 us,  3.2 sis,  0.0 ni, 57.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9074048 livre,  3466316 usados,  3797036 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12505624 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.458g 348016 S  66.7 15.8   1882:28 MATLAB                      
+
+
+top - 16:02:05 up 18:30,  1 user,  load average: 2.06, 2.65, 2.85
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.0 us,  3.2 sis,  0.0 ni, 57.8 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9062384 livre,  3466268 usados,  3808748 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12505668 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.459g 348016 S  20.0 15.8   1886:39 MATLAB                      
+
+
+top - 16:04:19 up 18:33,  1 user,  load average: 2.61, 2.69, 2.84
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.0 us,  3.2 sis,  0.0 ni, 57.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9051224 livre,  3466088 usados,  3820088 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12505852 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.458g 348016 S   6.7 15.8   1892:38 MATLAB                      
+
+
+top - 16:05:48 up 18:34,  1 user,  load average: 2.82, 2.73, 2.84
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.0 us,  3.2 sis,  0.0 ni, 57.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9040308 livre,  3466164 usados,  3830928 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12505776 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.459g 348016 S   0.0 15.8   1896:34 MATLAB                      
+
+
+top - 16:07:22 up 18:36,  1 user,  load average: 2.20, 2.62, 2.79
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.1 us,  3.2 sis,  0.0 ni, 57.7 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9027148 livre,  3466188 usados,  3844064 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12505752 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.458g 348016 S   0.0 15.8   1900:51 MATLAB                      
+
+
+top - 16:08:37 up 18:37,  1 user,  load average: 2.53, 2.67, 2.80
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.1 us,  3.2 sis,  0.0 ni, 57.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9014808 livre,  3467312 usados,  3855280 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12504632 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.459g 348016 S   0.0 15.8   1904:16 MATLAB                      
+
+
+top - 16:09:56 up 18:38,  1 user,  load average: 2.78, 2.72, 2.81
+Tarefas:   1 total,   0 em exec.,   1 dormindo,   0 parado,   0 zumbi
+%CPU(s): 39.1 us,  3.2 sis,  0.0 ni, 57.6 oc,  0.0 ag,  0.0 ih,  0.0 is  0.0 tr
+KB mem : 16337400 total,  9003848 livre,  3467048 usados,  3866504 buff/cache
+KB swap:  2097148 total,  2097148 livre,        0 usados, 12504896 mem dispon.
+
+  PID USUARIO   PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPO+ COMANDO                     
+ 2073 root      20   0 8361436 2.459g 348016 S   0.0 15.8   1907:55 MATLAB                      
+
+
+=== Total image predicted: 75
+=== End time: 28-Jan-2020 16:09:57

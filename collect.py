@@ -206,14 +206,15 @@ for method in methods:
                 i += 1
                 #break
             #break
-            summary.write('Dataset ' + datasetName + 'Class Accuracy: ' + str(totalClassAccuracy / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Class Precision: ' + str(totalClassPrecision / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Class Precision: ' + str(totalClassRecall / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Class Precision: ' + str(totalClassF1 / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Class Iou: ' + str(totalClassIou / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Region Accuracy: ' + str(totalRegionAccuracy / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Region Precision: ' + str(totalRegionPrecision / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Region Recall: ' + str(totalRegionRecall / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Region F1: ' + str(totalRegionF1 / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Region Iou: ' + str(totalRegionIou / len(predictions)) + '\n')
 
-            summary.write('Dataset ' + datasetName + 'Region Accuracy: ' + str(totalRegionAccuracy / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Region Precision: ' + str(totalRegionPrecision / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Region Precision: ' + str(totalRegionRecall / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Region Precision: ' + str(totalRegionF1 / len(predictions)) + '\n')
-            summary.write('Dataset ' + datasetName + 'Region Iou: ' + str(totalRegionIou / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Class Accuracy: ' + str(totalClassAccuracy / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Class Precision: ' + str(totalClassPrecision / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Class Recall: ' + str(totalClassRecall / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Class F1: ' + str(totalClassF1 / len(predictions)) + '\n')
+            summary.write('Dataset: ' + datasetName + ' - Class Iou: ' + str(totalClassIou / len(predictions)) + '\n')
+
