@@ -19,6 +19,74 @@ PROCESS_MEMORY_USAGE_LABEL = "Process memory usage: "
 PROCESS_CPU_PERCENT_LABEL = "Process CPU Percent: "
 TOTAL_IMAGE_PREDICTED_LABEL = "=== Total image predicted: "
 
+classesList = ["__ignore__", "parede", "chao", "armario", "cama", "cadeira", "sofa", "mesa", "porta", "janela",
+    "estante_livros", "quadro", "balcao", "persianas", "escrivaninha_carteira", "prateleira", "cortina", "comoda",
+    "travesseiro", "espelho", "tapete", "roupa", "teto", "livro", "geladeira", "tv", "papel", "toalha",
+    "cortina_chuveiro", "caixa", "quadro_aviso", "pessoa", "mesa_cabeceira_cama", "vaso_sanitario", "pia", "lampada",
+   "banheira", "sacola_mochila", "mean"]
+
+
+def convertClassDic(class_accuracies):
+    classes = {}
+    for idx, label in enumerate(class_accuracies):
+        classes[idx] = {
+            'points': 1,
+            'accuracy': label,
+            'precision': 0,
+            'recall': 0,
+            'f1': 0,
+            'iou': 0
+        }
+
+    return classes
+
+
+def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metricsPerClass):
+    metric = metricsmap.get(metric_type)
+    if not metric:
+        metricsmap[metric_type] = {
+            'accuracy': accuracy,
+            'precision': prec,
+            'recall': rec,
+            'f1': f1,
+            'iou': iou,
+            'classes': metricsPerClass
+        }
+    else:
+        classes = metric['classes']
+
+        for classMetric in metricsPerClass:
+            classMetricMap = classes.get(classMetric)
+
+            if not classMetricMap:
+                classes[classMetric] = {
+                    'points': metricsPerClass[classMetric]['points'],
+                    'accuracy': metricsPerClass[classMetric]['accuracy'],
+                    'precision': metricsPerClass[classMetric]['precision'],
+                    'recall': metricsPerClass[classMetric]['recall'],
+                    'f1': metricsPerClass[classMetric]['f1'],
+                    'iou': metricsPerClass[classMetric]['iou']
+                }
+            else:
+                totalPoints = classMetricMap['points'] + metricsPerClass[classMetric]['points']
+                classes[classMetric] = {
+                    'points': totalPoints,
+                    'accuracy': ((classMetricMap['accuracy'] * classMetricMap['points']) + (metricsPerClass[classMetric]['accuracy'] * metricsPerClass[classMetric]['points'])) / totalPoints,
+                    'precision': ((classMetricMap['precision'] * classMetricMap['points']) + (metricsPerClass[classMetric]['precision'] * metricsPerClass[classMetric]['points'])) / totalPoints,
+                    'recall': ((classMetricMap['recall'] * classMetricMap['points']) + (metricsPerClass[classMetric]['recall'] * metricsPerClass[classMetric]['points'])) / totalPoints,
+                    'f1': ((classMetricMap['f1'] * classMetricMap['points']) + (metricsPerClass[classMetric]['f1'] * metricsPerClass[classMetric]['points'])) / totalPoints,
+                    'iou': ((classMetricMap['iou'] * classMetricMap['points']) + (metricsPerClass[classMetric]['iou'] * metricsPerClass[classMetric]['points'])) / totalPoints
+                }
+
+        metricsmap[metric_type] = {
+            'accuracy': (accuracy + metric['accuracy']) / 2,
+            'precision': (prec + metric['precision']) / 2,
+            'recall': (rec + metric['recall']) / 2,
+            'f1': (f1 + metric['f1']) / 2,
+            'iou': (iou + metric['iou']) / 2,
+            'classes': classes
+        }
+
 methods = glob.glob("results/*", recursive=True)
 
 for method in methods:
@@ -145,6 +213,7 @@ for method in methods:
             summary.write('Mean CPU(3) Percent Usage during process: ' + str(totalCpuPercentCore3 / numCpuPercentCore3) + '\n')
 
         datasets = glob.glob(method + "/*" + os.path.sep) #only directories
+
         for dataset in datasets:
             datasetName = os.path.basename(os.path.dirname(dataset))
             print("Processing dataset " + datasetName)
@@ -162,7 +231,7 @@ for method in methods:
             totalRegionF1 = 0
 
             cropImage = datasetName == "active_vision" or datasetName == "putkk"
-
+            mapMetrics = {}
             i = 0
             for prediction in predictions:
                 imageName = os.path.basename(prediction)
@@ -173,48 +242,55 @@ for method in methods:
                 if cropImage:
                     gt = gt[0:1080, 419:1499]
 
-                gt = cv2.resize(gt, pred.shape[:2])
-                pred_regions = pred;
+                h, w = pred.shape[:2]
+                gt = cv2.resize(gt, (w, h))
+                pred_regions = pred
+
                 if isClassPrediction:
                     pred_regions = region_evaluation.split_classes_to_regions(pred)
-                    if not os.path.exists('tests/' + datasetName):
-                        os.makedirs('tests/' + datasetName)
-                    cv2.imwrite('tests/' + datasetName + '/region_' + imageName, pred_regions)
 
-                accuracy, prec, rec, f1, iou = region_evaluation.evaluate(pred_regions, gt)
+                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'all', False, True)
 
-                totalRegionAccuracy += accuracy
-                totalRegionPrecision += prec
-                totalRegionIou += iou
-                totalRegionRecall += rec
-                totalRegionF1 += f1
+                insertMetrics(mapMetrics, 'region_class_all', accuracy, prec, rec, f1, iou, metricsPerClass)
+
+                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'only_best_precision', False, True)
+
+                insertMetrics(mapMetrics, 'region_class_only_best_precision', accuracy, prec, rec, f1, iou, metricsPerClass)
 
                 if isClassPrediction:
                     accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(pred, gt, 39,
                                                                                                    score_averaging="weighted")
-                    totalClassAccuracy += accuracy
-                    totalClassPrecision += prec
-                    totalClassIou += iou
-                    totalClassRecall += rec
-                    totalClassF1 += f1
-                #if preds is None:
-                #    preds = np.zeros((pred.shape[0], pred.shape[1], len(predictions)), dtype=int)
-                #    gts = np.zeros((pred.shape[0], pred.shape[1], len(predictions)), dtype=int)
+                    insertMetrics(mapMetrics, 'class_prediction', accuracy, prec, rec, f1, iou,
+                                  convertClassDic(class_accuracies))
 
-                #preds[:, :, i] = pred
-                #gts[:, :, i] = gt
                 i += 1
-                #break
-            #break
-            summary.write('Dataset: ' + datasetName + ' - Region Accuracy: ' + str(totalRegionAccuracy / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Region Precision: ' + str(totalRegionPrecision / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Region Recall: ' + str(totalRegionRecall / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Region F1: ' + str(totalRegionF1 / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Region Iou: ' + str(totalRegionIou / len(predictions)) + '\n')
+                break
 
-            summary.write('Dataset: ' + datasetName + ' - Class Accuracy: ' + str(totalClassAccuracy / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Class Precision: ' + str(totalClassPrecision / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Class Recall: ' + str(totalClassRecall / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Class F1: ' + str(totalClassF1 / len(predictions)) + '\n')
-            summary.write('Dataset: ' + datasetName + ' - Class Iou: ' + str(totalClassIou / len(predictions)) + '\n')
+            summary.write('\n\n\n')
+            summary.write('=======================================================================\n')
+            summary.write('Dataset: ' + datasetName + '\n')
+            for metricType in mapMetrics:
+                summary.write('----------------------------------------------------------------------\n')
+                summary.write('Metric type: ' + metricType + '\n')
+                summary.write('\n')
+                summary.write(' - Accuracy: ' + str(mapMetrics[metricType]['accuracy']) + '\n')
+                summary.write(' - Precision: ' + str(mapMetrics[metricType]['precision']) + '\n')
+                summary.write(' - Recall: ' + str(mapMetrics[metricType]['recall']) + '\n')
+                summary.write(' - F1: ' + str(mapMetrics[metricType]['f1']) + '\n')
+                summary.write(' - Iou: ' + str(mapMetrics[metricType]['iou']) + '\n')
+                summary.write('\n')
+                summary.write('Classes: \n')
+                summary.write('\n')
+                classes = mapMetrics[metricType]['classes']
+                for classMetric in classes:
+                    summary.write(' Class: ' + str(classesList[classMetric]) + '\n')
+                    summary.write(' - Accuracy: ' + str(classes[classMetric]['accuracy']) + '\n')
+                    summary.write(' - Precision: ' + str(classes[classMetric]['precision']) + '\n')
+                    summary.write(' - Recall: ' + str(classes[classMetric]['recall']) + '\n')
+                    summary.write(' - F1: ' + str(classes[classMetric]['f1']) + '\n')
+                    summary.write(' - Iou: ' + str(classes[classMetric]['iou']) + '\n')
+                summary.write('\n')
+                summary.write('----------------------------------------------------------------------\n')
 
+            summary.write('=======================================================================\n')
+            break
