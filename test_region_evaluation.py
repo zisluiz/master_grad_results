@@ -2,24 +2,31 @@ import cv2
 from core import region_evaluation
 from core import metrics
 from core import helpers
+import numpy as np
 
-#imageName = '000210000010101.png'
-#dir_pred = 'results/rednet/active_vision/'
-#dir_gt = 'results/gt/active_vision/'
+imageName = '000210000010101.png'
+dir_pred = 'results/rednet/active_vision/'
+dir_gt = 'results/gt/active_vision/'
+crop = True
 
-imageName = '4a7bfe0577f74a1a891683cf5b435f93_4.png'
-dir_pred = 'results/fusenet_pytorch/semantics3d_raw/'
-dir_gt = 'results/gt/semantics3d_raw/'
-
-crop = False
+#imageName = '4a7bfe0577f74a1a891683cf5b435f93_4.png'
+#dir_pred = 'results/fusenet_pytorch/semantics3d_raw/'
+#dir_gt = 'results/gt/semantics3d_raw/'
+#crop = False
 
 pred = cv2.imread(dir_pred+(imageName.replace('jpg','png')), cv2.IMREAD_GRAYSCALE)
 gt = cv2.imread(dir_gt+(imageName.replace('jpg','png')), cv2.IMREAD_GRAYSCALE)
 
+unique_labels_gt = np.unique(gt)
+
 if crop:
     gt = gt[0:1080, 419:1499]
 h, w = pred.shape[:2]
-gt = cv2.resize(gt, (w, h))
+gt = cv2.resize(gt, (w, h), interpolation=cv2.INTER_NEAREST)
+
+unique_labels_gt2 = np.unique(gt)
+
+unique_labels_pred = np.unique(pred)
 
 pred_regions = pred
 pred_regions = region_evaluation.split_classes_to_regions(pred)
@@ -63,7 +70,7 @@ for metricPerClass in metricsPerClass.keys():
 
 
 accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(pred, gt, 39,
-                                                                               score_averaging="weighted")
+                                                                               score_averaging="macro")
 print("class label metric")
 print("totalAccuracy : ", str(accuracy))
 print("totalPrec : %s", str(prec))

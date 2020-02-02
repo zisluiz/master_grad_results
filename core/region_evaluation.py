@@ -112,55 +112,34 @@ def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetric
     print('Total grouped regions evaluated: '+str(len(results)))
     print('Total discarted tiny regions: ' + str(discartedRegions))
 
-    totalPoints = 0
-    totalAccuracy = 0
-    totalPrec = 0
-    totalRec = 0
-    totalF1 = 0
-    totalIou = 0
     metricsPerClass = {}
 
     for resultRegion in results.keys():
         if regionPerClass == 'all': #'only_best_precision'
-            for prediction in results[resultRegion]:
-                if totalPoints == 0:
-                    totalPoints = prediction['points']
-                    totalAccuracy = prediction['accuracy']
-                    totalPrec = prediction['precision']
-                    totalRec = prediction['recall']
-                    totalF1 = prediction['f1']
-                    totalIou = prediction['iou']
-                else:
-                    currentTotalPoints = totalPoints + prediction['points']
-                    totalAccuracy = ((totalAccuracy * totalPoints) + (prediction['accuracy'] * prediction['points'])) / currentTotalPoints
-                    totalPrec = ((totalPrec * totalPoints) + (prediction['precision'] * prediction['points'])) / currentTotalPoints
-                    totalRec = ((totalRec * totalPoints) + (prediction['recall'] * prediction['points'])) / currentTotalPoints
-                    totalF1 = ((totalF1 * totalPoints) + (prediction['f1'] * prediction['points'])) / currentTotalPoints
-                    totalIou = ((totalIou * totalPoints) + (prediction['iou'] * prediction['points'])) / currentTotalPoints
-                    totalPoints = currentTotalPoints
+            totalPoints = 0
+            ponderedAccuracy = 0.0
+            ponderedPrecision = 0.0
+            ponderedRecall = 0.0
+            ponderedF1 = 0.0
+            ponderedIou = 0.0
 
-                if not metricsPerClass.get(resultRegion):
-                    metricsPerClass[resultRegion] = {
-                        'region': resultRegion,
-                        'points': prediction['points'],
-                        'accuracy': prediction['accuracy'],
-                        'precision': prediction['precision'],
-                        'recall': prediction['recall'],
-                        'f1': prediction['f1'],
-                        'iou': prediction['iou']
-                    }
-                else:
-                    metricPerClass = metricsPerClass[resultRegion]
-                    totalPoints = metricPerClass['points'] + prediction['points']
-                    metricsPerClass[resultRegion] = {
-                        'region': metricsPerClass[resultRegion]['region'],
-                        'accuracy': ((metricPerClass['accuracy'] * metricPerClass['points']) + (prediction['accuracy'] * prediction['points'])) / totalPoints,
-                        'precision': ((metricPerClass['precision'] * metricPerClass['points']) + (prediction['precision'] * prediction['points'])) / totalPoints,
-                        'recall': ((metricPerClass['recall'] * metricPerClass['points']) + (prediction['recall'] * prediction['points'])) / totalPoints,
-                        'f1': ((metricPerClass['f1'] * metricPerClass['points']) + (prediction['f1'] * prediction['points'])) / totalPoints,
-                        'iou': ((metricPerClass['iou'] * metricPerClass['points']) + (prediction['iou'] * prediction['points'])) / totalPoints,
-                        'points': totalPoints
-                    }
+            for prediction in results[resultRegion]:
+                totalPoints += prediction['points']
+
+                ponderedAccuracy += prediction['accuracy'] * prediction['points']
+                ponderedPrecision += prediction['precision'] * prediction['points']
+                ponderedRecall += prediction['recall'] * prediction['points']
+                ponderedF1 += prediction['f1'] * prediction['points']
+                ponderedIou += prediction['iou'] * prediction['points']
+
+            metricsPerClass[resultRegion] = {
+                'points': totalPoints,
+                'accuracy': ponderedAccuracy / totalPoints,
+                'precision': ponderedPrecision / totalPoints,
+                'recall': ponderedRecall / totalPoints,
+                'f1': ponderedF1 / totalPoints,
+                'iou': ponderedIou / totalPoints,
+            }
         elif regionPerClass == 'only_best_precision':
             idxBestPrecision = -1
             for idx, prediction in enumerate(results[resultRegion]):
@@ -168,27 +147,6 @@ def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetric
                     idxBestPrecision = idx
 
             prediction = results[resultRegion][idxBestPrecision]
-
-            if totalPoints == 0:
-                totalPoints = prediction['points']
-                totalAccuracy = prediction['accuracy']
-                totalPrec = prediction['precision']
-                totalRec = prediction['recall']
-                totalF1 = prediction['f1']
-                totalIou = prediction['iou']
-            else:
-                currentTotalPoints = totalPoints + prediction['points']
-                totalAccuracy = ((totalAccuracy * totalPoints) + (
-                            prediction['accuracy'] * prediction['points'])) / currentTotalPoints
-                totalPrec = ((totalPrec * totalPoints) + (
-                            prediction['precision'] * prediction['points'])) / currentTotalPoints
-                totalRec = ((totalRec * totalPoints) + (
-                            prediction['recall'] * prediction['points'])) / currentTotalPoints
-                totalF1 = ((totalF1 * totalPoints) + (
-                            prediction['f1'] * prediction['points'])) / currentTotalPoints
-                totalIou = ((totalIou * totalPoints) + (
-                            prediction['iou'] * prediction['points'])) / currentTotalPoints
-                totalPoints = currentTotalPoints
 
             metricsPerClass[resultRegion] = {
                 'region': resultRegion,
@@ -200,58 +158,36 @@ def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetric
                 'iou': prediction['iou']
             }
 
-        if printPerClassMetrics:
-            for resultRegion in metricsPerClass.keys():
-                print("region: ", str(resultRegion))
-                print("totalAccuracy: ", str(metricsPerClass[resultRegion]['accuracy']))
-                print("totalPrec: ", str(metricsPerClass[resultRegion]['precision']))
-                print("totalRec: ", str(metricsPerClass[resultRegion]['recall']))
-                print("totalF1: ", str(metricsPerClass[resultRegion]['f1']))
-                print("totalIou: ", str(metricsPerClass[resultRegion]['iou']))
+    totalAccuracy = 0.0
+    totalPrec = 0.0
+    totalRec = 0.0
+    totalF1 = 0.0
+    totalIou = 0.0
 
+    for idx, label in enumerate(metricsPerClass):
+        metricLabel = metricsPerClass[label]
+        totalAccuracy += metricLabel['accuracy']
+        totalPrec += metricLabel['precision']
+        totalRec += metricLabel['recall']
+        totalF1 += metricLabel['f1']
+        totalIou += metricLabel['iou']
+
+    totalAccuracy = totalAccuracy / len(metricsPerClass)
+    totalPrec = totalPrec / len(metricsPerClass)
+    totalRec = totalRec / len(metricsPerClass)
+    totalF1 = totalF1 / len(metricsPerClass)
+    totalIou = totalIou / len(metricsPerClass)
+
+    if printPerClassMetrics:
+        for resultRegion in metricsPerClass.keys():
+            print("region: ", str(resultRegion))
+            print("totalAccuracy: ", str(metricsPerClass[resultRegion]['accuracy']))
+            print("totalPrec: ", str(metricsPerClass[resultRegion]['precision']))
+            print("totalRec: ", str(metricsPerClass[resultRegion]['recall']))
+            print("totalF1: ", str(metricsPerClass[resultRegion]['f1']))
+            print("totalIou: ", str(metricsPerClass[resultRegion]['iou']))
 
     return totalAccuracy, totalPrec, totalRec, totalF1, totalIou, metricsPerClass
-
-"""
-    totalPoints = results[0]['points']
-    totalAccuracy = results[0]['accuracy']
-    totalPrec = results[0]['precision']
-    totalRec = results[0]['recall']
-    totalF1 = results[0]['f1']
-    totalIou = results[0]['iou']
-    metricsPerClass = {}
-
-    for index in range(1, len(results)):
-        currentTotalPoints = totalPoints + results[index]['points']
-        totalAccuracy = ((totalAccuracy * totalPoints) + (results[index]['accuracy'] * results[index]['points'])) / currentTotalPoints
-        totalPrec = ((totalPrec * totalPoints) + (results[index]['precision'] * results[index]['points'])) / currentTotalPoints
-        totalRec = ((totalRec * totalPoints) + (results[index]['recall'] * results[index]['points'])) / currentTotalPoints
-        totalF1 = ((totalF1 * totalPoints) + (results[index]['f1'] * results[index]['points'])) / currentTotalPoints
-        totalIou  = ((totalIou * totalPoints) + (results[index]['iou'] * results[index]['points'])) / currentTotalPoints
-        totalPoints += results[index]['points']
-
-        if not metricsPerClass.get(results[index]['region']):
-            metricsPerClass[results[index]['region']] = {
-                'points': results[index]['points'],
-                'accuracy': results[index]['accuracy'],
-                'precision': results[index]['precision'],
-                'recall': results[index]['recall'],
-                'f1': results[index]['f1'],
-                'iou': results[index]['iou'],
-                'accuracy': results[index]['accuracy'],
-            }
-        else:
-            metricPerClass = metricsPerClass[results[index]['region']]
-            totalPoints = metricPerClass['points'] + results[index]['points']
-            metricsPerClass[results[index]['region']] = {
-                'accuracy': ((metricPerClass['accuracy'] * metricPerClass['points']) + (results[index]['accuracy'] * results[index]['points'])) / totalPoints,
-                'precision': ((metricPerClass['precision'] * metricPerClass['points']) + (results[index]['precision'] * results[index]['points'])) / totalPoints,
-                'recall': ((metricPerClass['recall'] * metricPerClass['points']) + (results[index]['recall'] * results[index]['points'])) / totalPoints,
-                'f1': ((metricPerClass['f1'] * metricPerClass['points']) + (results[index]['f1'] * results[index]['points'])) / totalPoints,
-                'iou': ((metricPerClass['iou'] * metricPerClass['points']) + (results[index]['iou'] * results[index]['points'])) / totalPoints,
-                'points': totalPoints
-            }
-"""
 
 def check_pixel_close_region(pred, x1, y1, x2, y2):
     if x2 > - 1 and x2 < len(pred) and y2 > -1 and y2 < len(pred[0]) and pred[x2][y2] != -1:

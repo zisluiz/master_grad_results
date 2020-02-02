@@ -55,7 +55,7 @@ pred = cv2.imread("results/rednet/active_vision/000210000010101.png", cv2.IMREAD
 gt = cv2.imread("results/gt/active_vision/000210000010101.png", cv2.IMREAD_GRAYSCALE)
 
 gt = gt[0:1080, 419:1499]
-gt = cv2.resize(gt, (pred.shape[1],pred.shape[0]))
+gt = cv2.resize(gt, (pred.shape[1],pred.shape[0]), interpolation=cv2.INTER_NEAREST)
 
 cv2.imwrite("gt.png", gt)
 

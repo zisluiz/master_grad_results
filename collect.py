@@ -19,6 +19,9 @@ PROCESS_MEMORY_USAGE_LABEL = "Process memory usage: "
 PROCESS_CPU_PERCENT_LABEL = "Process CPU Percent: "
 TOTAL_IMAGE_PREDICTED_LABEL = "=== Total image predicted: "
 
+PROCESS_CPU_PERCENT_MATLAB_LABEL = "%CPU(s): "
+PROCESS_MEMORY_USAGE_MATLAB_LABEL = "KB mem : "
+
 classesList = ["__ignore__", "parede", "chao", "armario", "cama", "cadeira", "sofa", "mesa", "porta", "janela",
     "estante_livros", "quadro", "balcao", "persianas", "escrivaninha_carteira", "prateleira", "cortina", "comoda",
     "travesseiro", "espelho", "tapete", "roupa", "teto", "livro", "geladeira", "tv", "papel", "toalha",
@@ -42,8 +45,8 @@ def convertClassDic(class_accuracies):
 
 
 def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metricsPerClass):
-    metric = metricsmap.get(metric_type)
-    if not metric:
+    metricsByType = metricsmap.get(metric_type)
+    if not metricsByType:
         metricsmap[metric_type] = {
             'accuracy': accuracy,
             'precision': prec,
@@ -53,14 +56,13 @@ def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metrics
             'classes': metricsPerClass
         }
     else:
-        classes = metric['classes']
+        classes = metricsByType['classes']
 
         for classMetric in metricsPerClass:
             classMetricMap = classes.get(classMetric)
 
             if not classMetricMap:
                 classes[classMetric] = {
-                    'points': metricsPerClass[classMetric]['points'],
                     'accuracy': metricsPerClass[classMetric]['accuracy'],
                     'precision': metricsPerClass[classMetric]['precision'],
                     'recall': metricsPerClass[classMetric]['recall'],
@@ -68,22 +70,20 @@ def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metrics
                     'iou': metricsPerClass[classMetric]['iou']
                 }
             else:
-                totalPoints = classMetricMap['points'] + metricsPerClass[classMetric]['points']
                 classes[classMetric] = {
-                    'points': totalPoints,
-                    'accuracy': ((classMetricMap['accuracy'] * classMetricMap['points']) + (metricsPerClass[classMetric]['accuracy'] * metricsPerClass[classMetric]['points'])) / totalPoints,
-                    'precision': ((classMetricMap['precision'] * classMetricMap['points']) + (metricsPerClass[classMetric]['precision'] * metricsPerClass[classMetric]['points'])) / totalPoints,
-                    'recall': ((classMetricMap['recall'] * classMetricMap['points']) + (metricsPerClass[classMetric]['recall'] * metricsPerClass[classMetric]['points'])) / totalPoints,
-                    'f1': ((classMetricMap['f1'] * classMetricMap['points']) + (metricsPerClass[classMetric]['f1'] * metricsPerClass[classMetric]['points'])) / totalPoints,
-                    'iou': ((classMetricMap['iou'] * classMetricMap['points']) + (metricsPerClass[classMetric]['iou'] * metricsPerClass[classMetric]['points'])) / totalPoints
+                    'accuracy': classMetricMap['accuracy'] + metricsPerClass[classMetric]['accuracy'],
+                    'precision': classMetricMap['precision'] + metricsPerClass[classMetric]['precision'],
+                    'recall': classMetricMap['recall'] + metricsPerClass[classMetric]['recall'],
+                    'f1': classMetricMap['f1'] + metricsPerClass[classMetric]['f1'],
+                    'iou': classMetricMap['iou'] + metricsPerClass[classMetric]['iou']
                 }
 
         metricsmap[metric_type] = {
-            'accuracy': (accuracy + metric['accuracy']) / 2,
-            'precision': (prec + metric['precision']) / 2,
-            'recall': (rec + metric['recall']) / 2,
-            'f1': (f1 + metric['f1']) / 2,
-            'iou': (iou + metric['iou']) / 2,
+            'accuracy': accuracy + metricsByType['accuracy'],
+            'precision': prec + metricsByType['precision'],
+            'recall': rec + metricsByType['recall'],
+            'f1': f1 + metricsByType['f1'],
+            'iou': iou + metricsByType['iou'],
             'classes': classes
         }
 
@@ -91,7 +91,7 @@ methods = glob.glob("results/*", recursive=True)
 
 for method in methods:
     methodName = os.path.basename(method)
-    if methodName == "gt" or methodName != "fusenet_pytorch":
+    if methodName == "gt": #or methodName != "jcsa_rm":
         continue
 
     print("Processing method " + methodName)
@@ -130,6 +130,7 @@ for method in methods:
             startTime = None
             endTime = None
             currentCpuCore = 0
+            currentSecondsPerImage = 0
 
             with open(log_run) as search:
                 for line in search:
@@ -146,7 +147,8 @@ for method in methods:
                         totalThreads += int(line[len(MAX_NUM_THREADS_LABEL):len(line)])
                         numThreads += 1
                     if line.startswith(SECONDS_PER_IMAGE_LABEL):
-                        secondsPerImage += float(line[len(SECONDS_PER_IMAGE_LABEL):len(line)])
+                        currentSecondsPerImage = float(line[len(SECONDS_PER_IMAGE_LABEL):len(line)])
+                        secondsPerImage += currentSecondsPerImage
                     if line.startswith(GPU_USAGE_PERCENT_LABEL):
                         totalGpuPercent += int(line[len(GPU_USAGE_PERCENT_LABEL):len(line)])
                         numGpuPercent += 1
@@ -185,13 +187,24 @@ for method in methods:
                         totalProcessMemUsage += float(line[len(PROCESS_MEMORY_USAGE_LABEL):len(line)])
                         numProcessMemUsage += 1
 
+                    if line.startswith(PROCESS_CPU_PERCENT_MATLAB_LABEL):
+                        processCpuPercent = float(line[len(PROCESS_CPU_PERCENT_MATLAB_LABEL):line.index('us')].strip())
+                        numProcessCpuPercent += 1
+
+                    if line.startswith(PROCESS_MEMORY_USAGE_MATLAB_LABEL):
+                        totalProcessMemUsage += float(line[line.index('livre,')+6:line.index('usados,')].strip())
+                        numProcessMemUsage += 1
+
             timeElapsedInSeconds = 0
             try:
                 timeElapsedInSeconds = (datetime.datetime.strptime(endTime,  '%Y-%m-%d %H:%M:%S.%f') - datetime.datetime.strptime(startTime,  '%Y-%m-%d %H:%M:%S.%f')).seconds
             except:
-                print("An exception occurred")
+                timeElapsedInSeconds = (datetime.datetime.strptime(endTime,'%d-%b-%Y %H:%M:%S') - datetime.datetime.strptime(startTime, '%d-%b-%Y %H:%M:%S')).seconds
 
             totalElapsedTime += timeElapsedInSeconds
+
+            if currentSecondsPerImage == 0:
+                secondsPerImage += timeElapsedInSeconds / totalProcessedImages
 
         if numLogFiles > 0:
             summary.write('Mean elapsed time to total processed files: '+str(totalElapsedTime / numLogFiles)+' seconds\n')
@@ -199,18 +212,24 @@ for method in methods:
             summary.write('Total number of runs: ' + str(numLogFiles) + '\n')
 
             summary.write('Mean seconds to process per image: ' + str(secondsPerImage / numLogFiles) + '\n')
-            summary.write('Mean opened threads during process: ' + str(totalThreads / numThreads) + '\n')
+            if totalThreads > 0:
+                summary.write('Mean opened threads during process: ' + str(totalThreads / numThreads) + '\n')
 
-            summary.write('Mean GPU Percent Usage during process: ' + str(totalGpuPercent / numGpuPercent) + '\n')
-            summary.write('Mean GPU Memory Usage during process: ' + str(totalGpuMemUsage / numGpuMemUsage) + '\n')
+            if totalGpuPercent > 0:
+                summary.write('Mean GPU Percent Usage during process: ' + str(totalGpuPercent / numGpuPercent) + '\n')
+                summary.write('Mean GPU Memory Usage during process: ' + str(totalGpuMemUsage / numGpuMemUsage) + '\n')
 
             summary.write('Mean CPU Memory Usage during process: ' + str(totalProcessMemUsage / numProcessMemUsage) + '\n')
-
             summary.write('Mean Process CPU Percent Usage during process: ' + str(totalProcessCpuPercent / numProcessCpuPercent) + '\n')
-            summary.write('Mean CPU(0) Percent Usage during process: ' + str(totalCpuPercentCore0 / numCpuPercentCore0) + '\n')
-            summary.write('Mean CPU(1) Percent Usage during process: ' + str(totalCpuPercentCore1 / numCpuPercentCore1) + '\n')
-            summary.write('Mean CPU(2) Percent Usage during process: ' + str(totalCpuPercentCore2 / numCpuPercentCore2) + '\n')
-            summary.write('Mean CPU(3) Percent Usage during process: ' + str(totalCpuPercentCore3 / numCpuPercentCore3) + '\n')
+
+            if totalCpuPercentCore0 > 0:
+                summary.write('Mean CPU(0) Percent Usage during process: ' + str(totalCpuPercentCore0 / numCpuPercentCore0) + '\n')
+            if totalCpuPercentCore1 > 0:
+                summary.write('Mean CPU(1) Percent Usage during process: ' + str(totalCpuPercentCore1 / numCpuPercentCore1) + '\n')
+            if totalCpuPercentCore2 > 0:
+                summary.write('Mean CPU(2) Percent Usage during process: ' + str(totalCpuPercentCore2 / numCpuPercentCore2) + '\n')
+            if totalCpuPercentCore3 > 0:
+                summary.write('Mean CPU(3) Percent Usage during process: ' + str(totalCpuPercentCore3 / numCpuPercentCore3) + '\n')
 
         datasets = glob.glob(method + "/*" + os.path.sep) #only directories
 
@@ -232,7 +251,7 @@ for method in methods:
 
             cropImage = datasetName == "active_vision" or datasetName == "putkk"
             mapMetrics = {}
-            i = 0
+            totalImages = 0
             for prediction in predictions:
                 imageName = os.path.basename(prediction)
                 print("Processing file "+imageName)
@@ -243,7 +262,7 @@ for method in methods:
                     gt = gt[0:1080, 419:1499]
 
                 h, w = pred.shape[:2]
-                gt = cv2.resize(gt, (w, h))
+                gt = cv2.resize(gt, (w, h), interpolation=cv2.INTER_NEAREST)
                 pred_regions = pred
 
                 if isClassPrediction:
@@ -263,8 +282,8 @@ for method in methods:
                     insertMetrics(mapMetrics, 'class_prediction', accuracy, prec, rec, f1, iou,
                                   convertClassDic(class_accuracies))
 
-                i += 1
-                break
+                totalImages += 1
+                #break
 
             summary.write('\n\n\n')
             summary.write('=======================================================================\n')
@@ -273,24 +292,24 @@ for method in methods:
                 summary.write('----------------------------------------------------------------------\n')
                 summary.write('Metric type: ' + metricType + '\n')
                 summary.write('\n')
-                summary.write(' - Accuracy: ' + str(mapMetrics[metricType]['accuracy']) + '\n')
-                summary.write(' - Precision: ' + str(mapMetrics[metricType]['precision']) + '\n')
-                summary.write(' - Recall: ' + str(mapMetrics[metricType]['recall']) + '\n')
-                summary.write(' - F1: ' + str(mapMetrics[metricType]['f1']) + '\n')
-                summary.write(' - Iou: ' + str(mapMetrics[metricType]['iou']) + '\n')
+                summary.write(' - Accuracy: ' + str(mapMetrics[metricType]['accuracy'] / totalImages) + '\n')
+                summary.write(' - Precision: ' + str(mapMetrics[metricType]['precision'] / totalImages) + '\n')
+                summary.write(' - Recall: ' + str(mapMetrics[metricType]['recall'] / totalImages) + '\n')
+                summary.write(' - F1: ' + str(mapMetrics[metricType]['f1'] / totalImages) + '\n')
+                summary.write(' - Iou: ' + str(mapMetrics[metricType]['iou'] / totalImages) + '\n')
                 summary.write('\n')
                 summary.write('Classes: \n')
                 summary.write('\n')
                 classes = mapMetrics[metricType]['classes']
                 for classMetric in classes:
                     summary.write(' Class: ' + str(classesList[classMetric]) + '\n')
-                    summary.write(' - Accuracy: ' + str(classes[classMetric]['accuracy']) + '\n')
-                    summary.write(' - Precision: ' + str(classes[classMetric]['precision']) + '\n')
-                    summary.write(' - Recall: ' + str(classes[classMetric]['recall']) + '\n')
-                    summary.write(' - F1: ' + str(classes[classMetric]['f1']) + '\n')
-                    summary.write(' - Iou: ' + str(classes[classMetric]['iou']) + '\n')
+                    summary.write(' - Accuracy: ' + str(classes[classMetric]['accuracy'] / totalImages) + '\n')
+                    summary.write(' - Precision: ' + str(classes[classMetric]['precision'] / totalImages) + '\n')
+                    summary.write(' - Recall: ' + str(classes[classMetric]['recall'] / totalImages) + '\n')
+                    summary.write(' - F1: ' + str(classes[classMetric]['f1'] / totalImages) + '\n')
+                    summary.write(' - Iou: ' + str(classes[classMetric]['iou'] / totalImages) + '\n')
                 summary.write('\n')
                 summary.write('----------------------------------------------------------------------\n')
 
             summary.write('=======================================================================\n')
-            break
+            #break
