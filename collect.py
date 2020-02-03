@@ -235,6 +235,10 @@ for method in methods:
 
         for dataset in datasets:
             datasetName = os.path.basename(os.path.dirname(dataset))
+
+            if "colored" in datasetName:
+                continue
+
             print("Processing dataset " + datasetName)
             predictions = glob.glob(dataset + "/*.png")
 
