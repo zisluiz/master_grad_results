@@ -91,7 +91,7 @@ methods = glob.glob("results/*", recursive=True)
 
 for method in methods:
     methodName = os.path.basename(method)
-    if methodName == "gt": #or methodName != "jcsa_rm":
+    if methodName == "gt": #or methodName != "graph_canny_segm":
         continue
 
     print("Processing method " + methodName)
@@ -272,11 +272,11 @@ for method in methods:
                 if isClassPrediction:
                     pred_regions = region_evaluation.split_classes_to_regions(pred)
 
-                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'all', False, True)
+                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'all', False, True, methodName == "graph_canny_segm")
 
                 insertMetrics(mapMetrics, 'region_class_all', accuracy, prec, rec, f1, iou, metricsPerClass)
 
-                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'only_best_precision', False, True)
+                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'only_best_precision', False, True, methodName == "graph_canny_segm")
 
                 insertMetrics(mapMetrics, 'region_class_only_best_precision', accuracy, prec, rec, f1, iou, metricsPerClass)
 

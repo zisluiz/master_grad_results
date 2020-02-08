@@ -17,7 +17,7 @@ OUT_CLASS_VALUE_SHOW = 0
 
 MAX_DISTANCE = 1
 
-def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetrics=False, removeTinyRegions=False):
+def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetrics=False, removeTinyRegions=False, ignoreValueZero=False):
     isPredRgb = len(pred.shape) == 3
     if isPredRgb:
         unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 3)})
@@ -35,9 +35,14 @@ def evaluate(pred, gt, regionPerClass='only_best_precision', printPerClassMetric
 
     for i, region in enumerate(unique_pixels):
         if isPredRgb:
+            isIgnoreColor = np.all(region == 0)
             indices = np.where(np.all(pred == region, axis=2 if isPredRgb else 1))
         else:
+            isIgnoreColor = region == 0
             indices = np.where(pred == region)
+
+        if isIgnoreColor and ignoreValueZero:
+            continue
 
         x1 = np.min(indices[0])
         x2 = np.max(indices[0])
