@@ -4,10 +4,16 @@ from core import metrics
 from core import helpers
 import numpy as np
 
-imageName = '000210000010101.png'
+#imageName = '000210000010101.png'
+#dir_pred = 'results/rednet/active_vision/'
+#dir_gt = 'results/gt/active_vision/'
+#crop = True
+
+imageName = '001510001980101.png'
 dir_pred = 'results/rednet/active_vision/'
 dir_gt = 'results/gt/active_vision/'
 crop = True
+
 
 #imageName = '4a7bfe0577f74a1a891683cf5b435f93_4.png'
 #dir_pred = 'results/fusenet_pytorch/semantics3d_raw/'
@@ -34,7 +40,7 @@ cv2.imwrite('tests/' + '/region_' + imageName, pred_regions)
 cv2.imwrite('tests/' + '/pred_' + imageName, helpers.depthLabelToRgb(pred))
 cv2.imwrite('tests/' + '/gt_' + imageName, helpers.depthLabelToRgb(gt))
 
-accuracy_reg, prec_reg, rec_reg, f1_reg, iou_reg, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'all', False, True)
+accuracy_reg, prec_reg, rec_reg, f1_reg, iou_reg, metricsPerClass, percentObjectsSegmented = region_evaluation.evaluate(pred_regions, gt, 'all', False, True)
 
 print("region type all")
 print("totalAccuracy region: ", str(accuracy_reg))
@@ -42,7 +48,19 @@ print("totalPrec region: ", str(prec_reg))
 print("totalRec region: ", str(rec_reg))
 print("totalF1 region: ", str(f1_reg))
 print("totalIou region: ", str(iou_reg))
+print("percentObjectsSegmented region: ", str(percentObjectsSegmented))
 
+accuracy_reg, prec_reg, rec_reg, f1_reg, iou_reg, metricsPerClass, percentObjectsSegmented = region_evaluation.evaluate(pred_regions, gt, 'all', False, True, False, True)
+
+print("region type without background and floor")
+print("totalAccuracy region: ", str(accuracy_reg))
+print("totalPrec region: ", str(prec_reg))
+print("totalRec region: ", str(rec_reg))
+print("totalF1 region: ", str(f1_reg))
+print("totalIou region: ", str(iou_reg))
+print("percentObjectsSegmented region: ", str(percentObjectsSegmented))
+
+"""
 for metricPerClass in metricsPerClass.keys():
     print("Class label: ", str(metricPerClass))
     print("Class accuracy: ", str(metricsPerClass[metricPerClass]['accuracy']))
@@ -60,6 +78,7 @@ print("totalRec region: ", str(rec_reg))
 print("totalF1 region: ", str(f1_reg))
 print("totalIou region: ", str(iou_reg))
 
+
 for metricPerClass in metricsPerClass.keys():
     print("Class label: ", str(metricPerClass))
     print("Class accuracy: ", str(metricsPerClass[metricPerClass]['accuracy']))
@@ -67,10 +86,10 @@ for metricPerClass in metricsPerClass.keys():
     print("Class recall: ", str(metricsPerClass[metricPerClass]['recall']))
     print("Class f1: ", str(metricsPerClass[metricPerClass]['f1']))
     print("Class iou: ", str(metricsPerClass[metricPerClass]['iou']))
-
+"""
 
 accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(pred, gt, 39,
-                                                                               score_averaging="macro")
+                                                                               score_averaging="weighted")
 print("class label metric")
 print("totalAccuracy : ", str(accuracy))
 print("totalPrec : %s", str(prec))

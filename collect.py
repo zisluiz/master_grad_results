@@ -44,7 +44,7 @@ def convertClassDic(class_accuracies):
     return classes
 
 
-def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metricsPerClass):
+def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metricsPerClass, percentObjectsSegmented = 0):
     metricsByType = metricsmap.get(metric_type)
     if not metricsByType:
         metricsmap[metric_type] = {
@@ -53,7 +53,8 @@ def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metrics
             'recall': rec,
             'f1': f1,
             'iou': iou,
-            'classes': metricsPerClass
+            'classes': metricsPerClass,
+            'percentObjectsSegmented': percentObjectsSegmented
         }
     else:
         classes = metricsByType['classes']
@@ -84,14 +85,15 @@ def insertMetrics(metricsmap, metric_type, accuracy, prec, rec, f1, iou, metrics
             'recall': rec + metricsByType['recall'],
             'f1': f1 + metricsByType['f1'],
             'iou': iou + metricsByType['iou'],
-            'classes': classes
+            'classes': classes,
+            'percentObjectsSegmented': percentObjectsSegmented + metricsByType['percentObjectsSegmented']
         }
 
 methods = glob.glob("results/*", recursive=True)
 
 for method in methods:
     methodName = os.path.basename(method)
-    if methodName == "gt": #or methodName != "graph_canny_segm":
+    if methodName == "gt": # or methodName != "graph_canny_segm":
         continue
 
     print("Processing method " + methodName)
@@ -188,11 +190,11 @@ for method in methods:
                         numProcessMemUsage += 1
 
                     if line.startswith(PROCESS_CPU_PERCENT_MATLAB_LABEL):
-                        processCpuPercent = float(line[len(PROCESS_CPU_PERCENT_MATLAB_LABEL):line.index('us')].strip())
+                        totalProcessCpuPercent += float(line[len(PROCESS_CPU_PERCENT_MATLAB_LABEL):line.index('us')].strip())
                         numProcessCpuPercent += 1
 
                     if line.startswith(PROCESS_MEMORY_USAGE_MATLAB_LABEL):
-                        totalProcessMemUsage += float(line[line.index('livre,')+6:line.index('usados,')].strip())
+                        totalProcessMemUsage += float(line[line.index('livre,')+6:line.index('usados,')].strip()) / 1000 #to mb
                         numProcessMemUsage += 1
 
             timeElapsedInSeconds = 0
@@ -272,13 +274,13 @@ for method in methods:
                 if isClassPrediction:
                     pred_regions = region_evaluation.split_classes_to_regions(pred)
 
-                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'all', False, True, methodName == "graph_canny_segm")
+                accuracy, prec, rec, f1, iou, metricsPerClass, percentObjectsSegmented = region_evaluation.evaluate(pred_regions, gt, 'all', False, True, methodName == "graph_canny_segm")
 
-                insertMetrics(mapMetrics, 'region_class_all', accuracy, prec, rec, f1, iou, metricsPerClass)
+                insertMetrics(mapMetrics, 'region_class_all', accuracy, prec, rec, f1, iou, metricsPerClass, percentObjectsSegmented)
 
-                accuracy, prec, rec, f1, iou, metricsPerClass = region_evaluation.evaluate(pred_regions, gt, 'only_best_precision', False, True, methodName == "graph_canny_segm")
+                accuracy, prec, rec, f1, iou, metricsPerClass, percentObjectsSegmented = region_evaluation.evaluate(pred_regions, gt, 'all', False, True, methodName == "graph_canny_segm", True)
 
-                insertMetrics(mapMetrics, 'region_class_only_best_precision', accuracy, prec, rec, f1, iou, metricsPerClass)
+                insertMetrics(mapMetrics, 'region_class_only_objects', accuracy, prec, rec, f1, iou, metricsPerClass, percentObjectsSegmented)
 
                 if isClassPrediction:
                     accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(pred, gt, 39,
@@ -296,22 +298,23 @@ for method in methods:
                 summary.write('----------------------------------------------------------------------\n')
                 summary.write('Metric type: ' + metricType + '\n')
                 summary.write('\n')
-                summary.write(' - Accuracy: ' + str(mapMetrics[metricType]['accuracy'] / totalImages) + '\n')
-                summary.write(' - Precision: ' + str(mapMetrics[metricType]['precision'] / totalImages) + '\n')
-                summary.write(' - Recall: ' + str(mapMetrics[metricType]['recall'] / totalImages) + '\n')
-                summary.write(' - F1: ' + str(mapMetrics[metricType]['f1'] / totalImages) + '\n')
-                summary.write(' - Iou: ' + str(mapMetrics[metricType]['iou'] / totalImages) + '\n')
+                summary.write(' - Accuracy: ' + str((mapMetrics[metricType]['accuracy'] / totalImages * 100)) + '\n')
+                summary.write(' - Precision: ' + str((mapMetrics[metricType]['precision'] / totalImages * 100)) + '\n')
+                summary.write(' - Recall: ' + str((mapMetrics[metricType]['recall'] / totalImages * 100)) + '\n')
+                summary.write(' - F1: ' + str((mapMetrics[metricType]['f1'] / totalImages * 100)) + '\n')
+                summary.write(' - Iou: ' + str((mapMetrics[metricType]['iou'] / totalImages * 100)) + '\n')
+                summary.write(' - Percent Objects Segmented: ' + str((mapMetrics[metricType]['percentObjectsSegmented'] / totalImages)) + '\n')
                 summary.write('\n')
                 summary.write('Classes: \n')
                 summary.write('\n')
                 classes = mapMetrics[metricType]['classes']
                 for classMetric in classes:
                     summary.write(' Class: ' + str(classesList[classMetric]) + '\n')
-                    summary.write(' - Accuracy: ' + str(classes[classMetric]['accuracy'] / totalImages) + '\n')
-                    summary.write(' - Precision: ' + str(classes[classMetric]['precision'] / totalImages) + '\n')
-                    summary.write(' - Recall: ' + str(classes[classMetric]['recall'] / totalImages) + '\n')
-                    summary.write(' - F1: ' + str(classes[classMetric]['f1'] / totalImages) + '\n')
-                    summary.write(' - Iou: ' + str(classes[classMetric]['iou'] / totalImages) + '\n')
+                    summary.write(' - Accuracy: ' + str((classes[classMetric]['accuracy'] / totalImages * 100)) + '\n')
+                    summary.write(' - Precision: ' + str((classes[classMetric]['precision'] / totalImages * 100)) + '\n')
+                    summary.write(' - Recall: ' + str((classes[classMetric]['recall'] / totalImages * 100)) + '\n')
+                    summary.write(' - F1: ' + str((classes[classMetric]['f1'] / totalImages * 100)) + '\n')
+                    summary.write(' - Iou: ' + str((classes[classMetric]['iou'] / totalImages * 100)) + '\n')
                 summary.write('\n')
                 summary.write('----------------------------------------------------------------------\n')
 
