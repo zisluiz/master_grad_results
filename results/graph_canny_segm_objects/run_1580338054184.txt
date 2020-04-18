@@ -1,0 +1,612 @@
+=== Start time: 2020-01-29 22:47:34.184111
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 0.0 --- CPU Percent: 1.6
+Process CPU Percent: 0.0 --- CPU Percent: 1.6
+Process CPU Percent: 0.0 --- CPU Percent: 0.8
+Process CPU Percent: 0.0 --- CPU Percent: 99.2
+Process memory usage: 303.161344
+Memory information: {'rss': 303923200, 'vms': 2510622720, 'shared': 152518656, 'text': 3883008, 'lib': 0, 'data': 356982784, 'dirty': 0, 'uss': 303161344, 'pss': 303951872, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.4 --- CPU Percent: 1.5
+Process CPU Percent: 102.4 --- CPU Percent: 0.8
+Process CPU Percent: 102.4 --- CPU Percent: 0.0
+Process CPU Percent: 102.4 --- CPU Percent: 100.0
+Process memory usage: 371.85536
+Memory information: {'rss': 372891648, 'vms': 2585530368, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 431890432, 'dirty': 0, 'uss': 371855360, 'pss': 372645888, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 1.5
+Process CPU Percent: 101.8 --- CPU Percent: 2.2
+Process CPU Percent: 101.8 --- CPU Percent: 1.5
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process memory usage: 441.450496
+Memory information: {'rss': 442515456, 'vms': 2658148352, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 504508416, 'dirty': 0, 'uss': 441450496, 'pss': 442241024, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.4 --- CPU Percent: 0.7
+Process CPU Percent: 101.4 --- CPU Percent: 0.0
+Process CPU Percent: 101.4 --- CPU Percent: 0.0
+Process CPU Percent: 101.4 --- CPU Percent: 100.0
+Process memory usage: 486.588416
+Memory information: {'rss': 487419904, 'vms': 2709856256, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 556216320, 'dirty': 0, 'uss': 486588416, 'pss': 487378944, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 1.6
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process CPU Percent: 102.1 --- CPU Percent: 2.3
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process memory usage: 534.167552
+Memory information: {'rss': 535068672, 'vms': 2763534336, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 609894400, 'dirty': 0, 'uss': 534167552, 'pss': 534958080, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.4 --- CPU Percent: 1.6
+Process CPU Percent: 102.4 --- CPU Percent: 0.8
+Process CPU Percent: 102.4 --- CPU Percent: 0.0
+Process CPU Percent: 102.4 --- CPU Percent: 100.0
+Process memory usage: 581.230592
+Memory information: {'rss': 582074368, 'vms': 2813931520, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 660291584, 'dirty': 0, 'uss': 581230592, 'pss': 582021120, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.0 --- CPU Percent: 0.8
+Process CPU Percent: 101.0 --- CPU Percent: 0.0
+Process CPU Percent: 101.0 --- CPU Percent: 0.8
+Process CPU Percent: 101.0 --- CPU Percent: 100.0
+Process memory usage: 636.289024
+Memory information: {'rss': 637247488, 'vms': 2875207680, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 721567744, 'dirty': 0, 'uss': 636289024, 'pss': 637079552, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.2 --- CPU Percent: 0.8
+Process CPU Percent: 102.2 --- CPU Percent: 0.0
+Process CPU Percent: 102.2 --- CPU Percent: 0.0
+Process CPU Percent: 102.2 --- CPU Percent: 100.0
+Process memory usage: 675.36896
+Memory information: {'rss': 676323328, 'vms': 2920558592, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 766918656, 'dirty': 0, 'uss': 675368960, 'pss': 676159488, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.4 --- CPU Percent: 2.4
+Process CPU Percent: 102.4 --- CPU Percent: 0.8
+Process CPU Percent: 102.4 --- CPU Percent: 0.0
+Process CPU Percent: 102.4 --- CPU Percent: 100.0
+Process memory usage: 714.0352
+Memory information: {'rss': 714846208, 'vms': 2965647360, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 812007424, 'dirty': 0, 'uss': 714035200, 'pss': 714825728, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.2 --- CPU Percent: 1.5
+Process CPU Percent: 101.2 --- CPU Percent: 0.7
+Process CPU Percent: 101.2 --- CPU Percent: 0.8
+Process CPU Percent: 101.2 --- CPU Percent: 100.0
+Process memory usage: 783.663104
+Memory information: {'rss': 784584704, 'vms': 3038466048, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 884826112, 'dirty': 0, 'uss': 783663104, 'pss': 784453632, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.3 --- CPU Percent: 0.7
+Process CPU Percent: 101.3 --- CPU Percent: 1.4
+Process CPU Percent: 101.3 --- CPU Percent: 1.4
+Process CPU Percent: 101.3 --- CPU Percent: 100.0
+Process memory usage: 866.803712
+Memory information: {'rss': 867606528, 'vms': 3127857152, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 974217216, 'dirty': 0, 'uss': 866803712, 'pss': 867594240, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.3 --- CPU Percent: 1.4
+Process CPU Percent: 102.3 --- CPU Percent: 0.0
+Process CPU Percent: 102.3 --- CPU Percent: 0.7
+Process CPU Percent: 102.3 --- CPU Percent: 100.0
+Process memory usage: 913.293312
+Memory information: {'rss': 914284544, 'vms': 3180683264, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1027043328, 'dirty': 0, 'uss': 913293312, 'pss': 914083840, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 0.0
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 1.6
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process memory usage: 958.554112
+Memory information: {'rss': 959602688, 'vms': 3232063488, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1078423552, 'dirty': 0, 'uss': 958554112, 'pss': 959344640, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.5 --- CPU Percent: 1.6
+Process CPU Percent: 101.5 --- CPU Percent: 1.6
+Process CPU Percent: 101.5 --- CPU Percent: 0.8
+Process CPU Percent: 101.5 --- CPU Percent: 100.0
+Process memory usage: 1035.431936
+Memory information: {'rss': 1036328960, 'vms': 3316621312, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1162981376, 'dirty': 0, 'uss': 1035431936, 'pss': 1036222464, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 1.4
+Process CPU Percent: 102.1 --- CPU Percent: 0.7
+Process CPU Percent: 102.1 --- CPU Percent: 0.7
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process memory usage: 1118.388224
+Memory information: {'rss': 1119416320, 'vms': 3403149312, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1249509376, 'dirty': 0, 'uss': 1118388224, 'pss': 1119178752, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.3 --- CPU Percent: 1.4
+Process CPU Percent: 102.3 --- CPU Percent: 0.7
+Process CPU Percent: 102.3 --- CPU Percent: 1.4
+Process CPU Percent: 102.3 --- CPU Percent: 100.0
+Process memory usage: 1206.976512
+Memory information: {'rss': 1208025088, 'vms': 3495657472, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1342017536, 'dirty': 0, 'uss': 1206976512, 'pss': 1207767040, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.1 --- CPU Percent: 0.8
+Process CPU Percent: 101.1 --- CPU Percent: 0.8
+Process CPU Percent: 101.1 --- CPU Percent: 0.8
+Process CPU Percent: 101.1 --- CPU Percent: 100.0
+Process memory usage: 1236.180992
+Memory information: {'rss': 1237143552, 'vms': 3528593408, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1374953472, 'dirty': 0, 'uss': 1236180992, 'pss': 1236971520, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 0.8
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process memory usage: 1321.136128
+Memory information: {'rss': 1322160128, 'vms': 3617185792, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1463545856, 'dirty': 0, 'uss': 1321136128, 'pss': 1321926656, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.2 --- CPU Percent: 1.6
+Process CPU Percent: 101.2 --- CPU Percent: 0.0
+Process CPU Percent: 101.2 --- CPU Percent: 1.6
+Process CPU Percent: 101.2 --- CPU Percent: 100.0
+Process memory usage: 1353.285632
+Memory information: {'rss': 1354166272, 'vms': 3653124096, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1499484160, 'dirty': 0, 'uss': 1353285632, 'pss': 1354076160, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 1.7
+Process CPU Percent: 102.6 --- CPU Percent: 1.7
+Process CPU Percent: 102.6 --- CPU Percent: 0.8
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process memory usage: 1420.120064
+Memory information: {'rss': 1421041664, 'vms': 3727302656, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1573662720, 'dirty': 0, 'uss': 1420120064, 'pss': 1420910592, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 1.6
+Process CPU Percent: 102.1 --- CPU Percent: 1.6
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process memory usage: 1485.484032
+Memory information: {'rss': 1486417920, 'vms': 3796332544, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1642692608, 'dirty': 0, 'uss': 1485484032, 'pss': 1486274560, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 0.0
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 100.0
+Process memory usage: 1577.136128
+Memory information: {'rss': 1578082304, 'vms': 3891781632, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1738141696, 'dirty': 0, 'uss': 1577136128, 'pss': 1577926656, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.2 --- CPU Percent: 0.8
+Process CPU Percent: 101.2 --- CPU Percent: 1.6
+Process CPU Percent: 101.2 --- CPU Percent: 0.8
+Process CPU Percent: 101.2 --- CPU Percent: 100.0
+Process memory usage: 1608.941568
+Memory information: {'rss': 1609879552, 'vms': 3927339008, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1773699072, 'dirty': 0, 'uss': 1608941568, 'pss': 1609732096, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 2.5
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process memory usage: 1687.867392
+Memory information: {'rss': 1688788992, 'vms': 4013834240, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1860194304, 'dirty': 0, 'uss': 1687867392, 'pss': 1688657920, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 0.8
+Process CPU Percent: 102.6 --- CPU Percent: 0.8
+Process CPU Percent: 102.6 --- CPU Percent: 0.0
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process memory usage: 1729.507328
+Memory information: {'rss': 1730392064, 'vms': 4062744576, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 1909104640, 'dirty': 0, 'uss': 1729507328, 'pss': 1730297856, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.7 --- CPU Percent: 0.8
+Process CPU Percent: 101.7 --- CPU Percent: 0.8
+Process CPU Percent: 101.7 --- CPU Percent: 0.8
+Process CPU Percent: 101.7 --- CPU Percent: 100.0
+Process memory usage: 1829.13024
+Memory information: {'rss': 1830076416, 'vms': 4166262784, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2012622848, 'dirty': 0, 'uss': 1829130240, 'pss': 1829920768, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 0.0
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process memory usage: 1873.03936
+Memory information: {'rss': 1874059264, 'vms': 4213805056, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2060165120, 'dirty': 0, 'uss': 1873039360, 'pss': 1873829888, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 1.8
+Process CPU Percent: 102.1 --- CPU Percent: 0.9
+Process CPU Percent: 102.1 --- CPU Percent: 0.0
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process memory usage: 1918.500864
+Memory information: {'rss': 1919373312, 'vms': 4266676224, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2113036288, 'dirty': 0, 'uss': 1918500864, 'pss': 1919291392, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.7 --- CPU Percent: 0.0
+Process CPU Percent: 101.7 --- CPU Percent: 0.9
+Process CPU Percent: 101.7 --- CPU Percent: 38.2
+Process CPU Percent: 101.7 --- CPU Percent: 63.3
+Process memory usage: 1956.27008
+Memory information: {'rss': 1957191680, 'vms': 4311904256, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2158264320, 'dirty': 0, 'uss': 1956270080, 'pss': 1957060608, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.5 --- CPU Percent: 1.8
+Process CPU Percent: 102.5 --- CPU Percent: 2.6
+Process CPU Percent: 102.5 --- CPU Percent: 100.0
+Process CPU Percent: 102.5 --- CPU Percent: 3.5
+Process memory usage: 2005.204992
+Memory information: {'rss': 2006122496, 'vms': 4368388096, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2214748160, 'dirty': 0, 'uss': 2005204992, 'pss': 2005995520, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 2.5
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process CPU Percent: 102.1 --- CPU Percent: 5.0
+Process memory usage: 2056.634368
+Memory information: {'rss': 2057678848, 'vms': 4423507968, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2269868032, 'dirty': 0, 'uss': 2056634368, 'pss': 2057424896, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 3.8
+Process CPU Percent: 101.8 --- CPU Percent: 6.4
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process CPU Percent: 101.8 --- CPU Percent: 1.8
+Process memory usage: 2100.793344
+Memory information: {'rss': 2101788672, 'vms': 4471394304, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2317754368, 'dirty': 0, 'uss': 2100793344, 'pss': 2101583872, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.7 --- CPU Percent: 3.4
+Process CPU Percent: 101.7 --- CPU Percent: 1.7
+Process CPU Percent: 101.7 --- CPU Percent: 100.0
+Process CPU Percent: 101.7 --- CPU Percent: 0.9
+Process memory usage: 2174.062592
+Memory information: {'rss': 2175049728, 'vms': 4548530176, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2394890240, 'dirty': 0, 'uss': 2174062592, 'pss': 2174853120, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 3.1
+Process CPU Percent: 102.1 --- CPU Percent: 1.5
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process CPU Percent: 102.1 --- CPU Percent: 3.1
+Process memory usage: 2288.545792
+Memory information: {'rss': 2289586176, 'vms': 4670504960, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2516865024, 'dirty': 0, 'uss': 2288545792, 'pss': 2289336320, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.6 --- CPU Percent: 4.7
+Process CPU Percent: 101.6 --- CPU Percent: 8.1
+Process CPU Percent: 101.6 --- CPU Percent: 100.0
+Process CPU Percent: 101.6 --- CPU Percent: 10.9
+Process memory usage: 2323.5584
+Memory information: {'rss': 2324484096, 'vms': 4709244928, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2555604992, 'dirty': 0, 'uss': 2323558400, 'pss': 2324348928, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.2 --- CPU Percent: 1.8
+Process CPU Percent: 101.2 --- CPU Percent: 1.9
+Process CPU Percent: 101.2 --- CPU Percent: 100.0
+Process CPU Percent: 101.2 --- CPU Percent: 3.6
+Process memory usage: 2360.758272
+Memory information: {'rss': 2361651200, 'vms': 4750045184, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2596405248, 'dirty': 0, 'uss': 2360758272, 'pss': 2361548800, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 103.1 --- CPU Percent: 0.9
+Process CPU Percent: 103.1 --- CPU Percent: 1.8
+Process CPU Percent: 103.1 --- CPU Percent: 100.0
+Process CPU Percent: 103.1 --- CPU Percent: 0.0
+Process memory usage: 2400.038912
+Memory information: {'rss': 2401054720, 'vms': 4796735488, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2643095552, 'dirty': 0, 'uss': 2400038912, 'pss': 2400829440, 'swap': 0}
+GPU Usage Percent: 10
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.9 --- CPU Percent: 2.6
+Process CPU Percent: 101.9 --- CPU Percent: 0.0
+Process CPU Percent: 101.9 --- CPU Percent: 100.0
+Process CPU Percent: 101.9 --- CPU Percent: 1.7
+Process memory usage: 2437.681152
+Memory information: {'rss': 2438696960, 'vms': 4838297600, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2684657664, 'dirty': 0, 'uss': 2437681152, 'pss': 2438471680, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 0.9
+Process CPU Percent: 101.8 --- CPU Percent: 1.7
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process CPU Percent: 101.8 --- CPU Percent: 1.7
+Process memory usage: 2481.64352
+Memory information: {'rss': 2482688000, 'vms': 4889710592, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2736070656, 'dirty': 0, 'uss': 2481643520, 'pss': 2482434048, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 103.3 --- CPU Percent: 2.6
+Process CPU Percent: 103.3 --- CPU Percent: 0.9
+Process CPU Percent: 103.3 --- CPU Percent: 100.0
+Process CPU Percent: 103.3 --- CPU Percent: 0.9
+Process memory usage: 2534.526976
+Memory information: {'rss': 2535358464, 'vms': 4946305024, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2792665088, 'dirty': 0, 'uss': 2534526976, 'pss': 2535317504, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.6 --- CPU Percent: 0.9
+Process CPU Percent: 101.6 --- CPU Percent: 0.9
+Process CPU Percent: 101.6 --- CPU Percent: 100.0
+Process CPU Percent: 101.6 --- CPU Percent: 0.9
+Process memory usage: 2577.129472
+Memory information: {'rss': 2577956864, 'vms': 4992528384, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2838888448, 'dirty': 0, 'uss': 2577129472, 'pss': 2577920000, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.4 --- CPU Percent: 1.7
+Process CPU Percent: 101.4 --- CPU Percent: 1.7
+Process CPU Percent: 101.4 --- CPU Percent: 100.0
+Process CPU Percent: 101.4 --- CPU Percent: 1.7
+Process memory usage: 2626.097152
+Memory information: {'rss': 2627072000, 'vms': 5045346304, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2891706368, 'dirty': 0, 'uss': 2626097152, 'pss': 2626887680, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 0.9
+Process CPU Percent: 102.6 --- CPU Percent: 0.9
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process CPU Percent: 102.6 --- CPU Percent: 0.9
+Process memory usage: 2657.93536
+Memory information: {'rss': 2658992128, 'vms': 5084508160, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 2930868224, 'dirty': 0, 'uss': 2657935360, 'pss': 2658725888, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.3 --- CPU Percent: 0.0
+Process CPU Percent: 102.3 --- CPU Percent: 0.0
+Process CPU Percent: 102.3 --- CPU Percent: 100.0
+Process CPU Percent: 102.3 --- CPU Percent: 0.0
+Process memory usage: 2722.258944
+Memory information: {'rss': 2723061760, 'vms': 5156352000, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3002712064, 'dirty': 0, 'uss': 2722258944, 'pss': 2723049472, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.0 --- CPU Percent: 1.6
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 100.0
+Process CPU Percent: 102.0 --- CPU Percent: 1.6
+Process memory usage: 2772.205568
+Memory information: {'rss': 2773180416, 'vms': 5209960448, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3056320512, 'dirty': 0, 'uss': 2772205568, 'pss': 2772996096, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.3 --- CPU Percent: 1.7
+Process CPU Percent: 102.3 --- CPU Percent: 1.7
+Process CPU Percent: 102.3 --- CPU Percent: 100.0
+Process CPU Percent: 102.3 --- CPU Percent: 1.7
+Process memory usage: 2829.53728
+Memory information: {'rss': 2830528512, 'vms': 5271228416, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3117588480, 'dirty': 0, 'uss': 2829537280, 'pss': 2830327808, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.7 --- CPU Percent: 1.5
+Process CPU Percent: 101.7 --- CPU Percent: 1.5
+Process CPU Percent: 101.7 --- CPU Percent: 100.0
+Process CPU Percent: 101.7 --- CPU Percent: 1.5
+Process memory usage: 2927.0016
+Memory information: {'rss': 2927927296, 'vms': 5372424192, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3218784256, 'dirty': 0, 'uss': 2927001600, 'pss': 2927792128, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.9 --- CPU Percent: 1.5
+Process CPU Percent: 101.9 --- CPU Percent: 0.7
+Process CPU Percent: 101.9 --- CPU Percent: 100.0
+Process CPU Percent: 101.9 --- CPU Percent: 1.4
+Process memory usage: 3037.3888
+Memory information: {'rss': 3038433280, 'vms': 5486452736, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3332812800, 'dirty': 0, 'uss': 3037388800, 'pss': 3038179328, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.2 --- CPU Percent: 0.7
+Process CPU Percent: 102.2 --- CPU Percent: 0.0
+Process CPU Percent: 102.2 --- CPU Percent: 100.0
+Process CPU Percent: 102.2 --- CPU Percent: 0.7
+Process memory usage: 3106.14016
+Memory information: {'rss': 3106983936, 'vms': 5558976512, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3405336576, 'dirty': 0, 'uss': 3106140160, 'pss': 3106930688, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.7 --- CPU Percent: 1.6
+Process CPU Percent: 101.7 --- CPU Percent: 0.8
+Process CPU Percent: 101.7 --- CPU Percent: 100.0
+Process CPU Percent: 101.7 --- CPU Percent: 1.6
+Process memory usage: 3190.816768
+Memory information: {'rss': 3191816192, 'vms': 5647310848, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3493670912, 'dirty': 0, 'uss': 3190816768, 'pss': 3191607296, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.0 --- CPU Percent: 1.7
+Process CPU Percent: 101.0 --- CPU Percent: 1.7
+Process CPU Percent: 101.0 --- CPU Percent: 100.0
+Process CPU Percent: 101.0 --- CPU Percent: 2.5
+Process memory usage: 3233.81248
+Memory information: {'rss': 3234852864, 'vms': 5697761280, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3544121344, 'dirty': 0, 'uss': 3233812480, 'pss': 3234603008, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.9 --- CPU Percent: 0.9
+Process CPU Percent: 102.9 --- CPU Percent: 1.7
+Process CPU Percent: 102.9 --- CPU Percent: 100.0
+Process CPU Percent: 102.9 --- CPU Percent: 0.0
+Process memory usage: 3273.146368
+Memory information: {'rss': 3274182656, 'vms': 5744562176, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3590922240, 'dirty': 0, 'uss': 3273146368, 'pss': 3273936896, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.5 --- CPU Percent: 1.6
+Process CPU Percent: 101.5 --- CPU Percent: 1.6
+Process CPU Percent: 101.5 --- CPU Percent: 100.0
+Process CPU Percent: 101.5 --- CPU Percent: 0.8
+Process memory usage: 3322.515456
+Memory information: {'rss': 3323514880, 'vms': 5801512960, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3647873024, 'dirty': 0, 'uss': 3322515456, 'pss': 3323305984, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process memory usage: 3390.746624
+Memory information: {'rss': 3391647744, 'vms': 5873487872, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3719847936, 'dirty': 0, 'uss': 3390746624, 'pss': 3391537152, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 0.8
+Process CPU Percent: 101.8 --- CPU Percent: 0.0
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process CPU Percent: 101.8 --- CPU Percent: 0.0
+Process memory usage: 3444.084736
+Memory information: {'rss': 3445063680, 'vms': 5934059520, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3780419584, 'dirty': 0, 'uss': 3444084736, 'pss': 3444875264, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.9 --- CPU Percent: 1.7
+Process CPU Percent: 101.9 --- CPU Percent: 0.8
+Process CPU Percent: 101.9 --- CPU Percent: 100.0
+Process CPU Percent: 101.9 --- CPU Percent: 1.7
+Process memory usage: 3500.371968
+Memory information: {'rss': 3501400064, 'vms': 5994283008, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3840643072, 'dirty': 0, 'uss': 3500371968, 'pss': 3501162496, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.8 --- CPU Percent: 0.0
+Process CPU Percent: 101.8 --- CPU Percent: 1.7
+Process CPU Percent: 101.8 --- CPU Percent: 100.0
+Process CPU Percent: 101.8 --- CPU Percent: 0.9
+Process memory usage: 3542.016
+Memory information: {'rss': 3543031808, 'vms': 6043275264, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3889635328, 'dirty': 0, 'uss': 3542016000, 'pss': 3542806528, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.9 --- CPU Percent: 1.6
+Process CPU Percent: 101.9 --- CPU Percent: 0.8
+Process CPU Percent: 101.9 --- CPU Percent: 100.0
+Process CPU Percent: 101.9 --- CPU Percent: 0.8
+Process memory usage: 3626.9056
+Memory information: {'rss': 3627864064, 'vms': 6131982336, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 3978342400, 'dirty': 0, 'uss': 3626905600, 'pss': 3627696128, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process CPU Percent: 102.1 --- CPU Percent: 0.8
+Process memory usage: 3695.75936
+Memory information: {'rss': 3696816128, 'vms': 6204399616, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4050759680, 'dirty': 0, 'uss': 3695759360, 'pss': 3696549888, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.2 --- CPU Percent: 2.4
+Process CPU Percent: 102.2 --- CPU Percent: 2.4
+Process CPU Percent: 102.2 --- CPU Percent: 100.0
+Process CPU Percent: 102.2 --- CPU Percent: 0.8
+Process memory usage: 3734.372352
+Memory information: {'rss': 3735351296, 'vms': 6246924288, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4093284352, 'dirty': 0, 'uss': 3734372352, 'pss': 3735162880, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.5 --- CPU Percent: 0.9
+Process CPU Percent: 101.5 --- CPU Percent: 0.8
+Process CPU Percent: 101.5 --- CPU Percent: 100.0
+Process CPU Percent: 101.5 --- CPU Percent: 1.7
+Process memory usage: 3781.71392
+Memory information: {'rss': 3782651904, 'vms': 6297931776, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4144291840, 'dirty': 0, 'uss': 3781713920, 'pss': 3782504448, 'swap': 0}
+GPU Usage Percent: 2
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.1 --- CPU Percent: 2.2
+Process CPU Percent: 102.1 --- CPU Percent: 0.7
+Process CPU Percent: 102.1 --- CPU Percent: 100.0
+Process CPU Percent: 102.1 --- CPU Percent: 0.7
+Process memory usage: 3888.57856
+Memory information: {'rss': 3889532928, 'vms': 6408511488, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4254871552, 'dirty': 0, 'uss': 3888578560, 'pss': 3889369088, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.4 --- CPU Percent: 0.8
+Process CPU Percent: 101.4 --- CPU Percent: 0.8
+Process CPU Percent: 101.4 --- CPU Percent: 100.0
+Process CPU Percent: 101.4 --- CPU Percent: 0.8
+Process memory usage: 3957.16608
+Memory information: {'rss': 3958149120, 'vms': 6480719872, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4327079936, 'dirty': 0, 'uss': 3957166080, 'pss': 3957956608, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.3 --- CPU Percent: 1.6
+Process CPU Percent: 102.3 --- CPU Percent: 0.8
+Process CPU Percent: 102.3 --- CPU Percent: 100.0
+Process CPU Percent: 102.3 --- CPU Percent: 0.8
+Process memory usage: 4007.89504
+Memory information: {'rss': 4008906752, 'vms': 6535176192, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4381536256, 'dirty': 0, 'uss': 4007895040, 'pss': 4008685568, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.2 --- CPU Percent: 0.9
+Process CPU Percent: 102.2 --- CPU Percent: 0.0
+Process CPU Percent: 102.2 --- CPU Percent: 100.0
+Process CPU Percent: 102.2 --- CPU Percent: 0.0
+Process memory usage: 4061.5936
+Memory information: {'rss': 4062564352, 'vms': 6592716800, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4439076864, 'dirty': 0, 'uss': 4061593600, 'pss': 4062384128, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process CPU Percent: 102.6 --- CPU Percent: 100.0
+Process CPU Percent: 102.6 --- CPU Percent: 1.6
+Process memory usage: 4125.835264
+Memory information: {'rss': 4126633984, 'vms': 6664359936, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4510720000, 'dirty': 0, 'uss': 4125835264, 'pss': 4126625792, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.3 --- CPU Percent: 1.6
+Process CPU Percent: 101.3 --- CPU Percent: 1.6
+Process CPU Percent: 101.3 --- CPU Percent: 100.0
+Process CPU Percent: 101.3 --- CPU Percent: 0.0
+Process memory usage: 4182.294528
+Memory information: {'rss': 4183175168, 'vms': 6724526080, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4570886144, 'dirty': 0, 'uss': 4182294528, 'pss': 4183085056, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 100.0
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process memory usage: 4255.584256
+Memory information: {'rss': 4256542720, 'vms': 6801715200, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4648075264, 'dirty': 0, 'uss': 4255584256, 'pss': 4256374784, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.0 --- CPU Percent: 1.5
+Process CPU Percent: 102.0 --- CPU Percent: 0.8
+Process CPU Percent: 102.0 --- CPU Percent: 100.0
+Process CPU Percent: 102.0 --- CPU Percent: 1.5
+Process memory usage: 4314.513408
+Memory information: {'rss': 4315324416, 'vms': 6868037632, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4714397696, 'dirty': 0, 'uss': 4314513408, 'pss': 4315303936, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.5 --- CPU Percent: 0.9
+Process CPU Percent: 102.5 --- CPU Percent: 1.8
+Process CPU Percent: 102.5 --- CPU Percent: 100.0
+Process CPU Percent: 102.5 --- CPU Percent: 1.8
+Process memory usage: 4347.26912
+Memory information: {'rss': 4348256256, 'vms': 6908248064, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4754608128, 'dirty': 0, 'uss': 4347269120, 'pss': 4348059648, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 100.9 --- CPU Percent: 0.9
+Process CPU Percent: 100.9 --- CPU Percent: 0.0
+Process CPU Percent: 100.9 --- CPU Percent: 100.0
+Process CPU Percent: 100.9 --- CPU Percent: 0.9
+Process memory usage: 4402.970624
+Memory information: {'rss': 4403806208, 'vms': 6971494400, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4817854464, 'dirty': 0, 'uss': 4402970624, 'pss': 4403761152, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.7 --- CPU Percent: 0.8
+Process CPU Percent: 102.7 --- CPU Percent: 0.8
+Process CPU Percent: 102.7 --- CPU Percent: 100.0
+Process CPU Percent: 102.7 --- CPU Percent: 0.0
+Process memory usage: 4463.894528
+Memory information: {'rss': 4464943104, 'vms': 7035981824, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4882341888, 'dirty': 0, 'uss': 4463894528, 'pss': 4464685056, 'swap': 0}
+GPU Usage Percent: 0
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.5 --- CPU Percent: 0.8
+Process CPU Percent: 101.5 --- CPU Percent: 1.5
+Process CPU Percent: 101.5 --- CPU Percent: 100.0
+Process CPU Percent: 101.5 --- CPU Percent: 0.8
+Process memory usage: 4541.800448
+Memory information: {'rss': 4542607360, 'vms': 7117721600, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 4964081664, 'dirty': 0, 'uss': 4541800448, 'pss': 4542590976, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 102.2 --- CPU Percent: 1.4
+Process CPU Percent: 102.2 --- CPU Percent: 0.7
+Process CPU Percent: 102.2 --- CPU Percent: 100.0
+Process CPU Percent: 102.2 --- CPU Percent: 1.4
+Process memory usage: 4601.954304
+Memory information: {'rss': 4602982400, 'vms': 7181647872, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 5028007936, 'dirty': 0, 'uss': 4601954304, 'pss': 4602744832, 'swap': 0}
+GPU Usage Percent: 1
+GPU Mem Usage (MB)): 91.881472
+Process CPU Percent: 101.3 --- CPU Percent: 1.5
+Process CPU Percent: 101.3 --- CPU Percent: 0.8
+Process CPU Percent: 101.3 --- CPU Percent: 100.0
+Process CPU Percent: 101.3 --- CPU Percent: 0.8
+Process memory usage: 4688.36352
+Memory information: {'rss': 4689326080, 'vms': 7271759872, 'shared': 152768512, 'text': 3883008, 'lib': 0, 'data': 5118119936, 'dirty': 0, 'uss': 4688363520, 'pss': 4689154048, 'swap': 0}
+=== Mean GPU Usage Percent: 0.3333333333333333
+=== Mean GPU Mem Usage (MB): 91.88147200000002
+=== Mean cpu0 usage: 1.424
+=== Mean cpu1 usage: 1.1653333333333329
+=== Mean cpu2 usage: 62.141333333333336
+=== Mean cpu3 usage: 39.08133333333335
+=== Mean memory usage (MB): 2461.5863364266665
+=== Total image predicted: 75
+=== Seconds per image: 1.1396643829345703
+=== Max num threads: 4
+=== End time: 2020-01-29 22:50:33.068998

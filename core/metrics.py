@@ -1,16 +1,19 @@
 import numpy as np
-from keras import backend as K
+#from keras import backend as K
 from sklearn.metrics import precision_score, \
     recall_score, confusion_matrix, classification_report, \
     accuracy_score, f1_score
+from core import eval_semantic_segmentation
+from math import isnan
 
+"""
 def iou_coef(y_true, y_pred, smooth=1):
     axis = 0
     intersection = K.sum(K.abs(y_true * y_pred), axis=axis)
     union = K.sum(y_true, axis)+K.sum(y_pred, axis)-intersection
     iou = K.mean((intersection + smooth) / (union + smooth), axis=0)
     return iou
-
+"""
 # Compute the average segmentation accuracy across all classes
 def compute_global_accuracy(pred, label):
     total = len(label)
@@ -62,17 +65,27 @@ def compute_mean_iou(pred, label):
     return mean_iou
 
 
-def evaluate_segmentation(pred, label, num_classes, score_averaging="weighted"):
+def evaluate_segmentation(pred, label, num_classes, labels=None, score_averaging="weighted"):
     flat_pred = pred.flatten()
     flat_label = label.flatten()
 
-    global_accuracy = compute_global_accuracy(flat_pred, flat_label)
-    class_accuracies = compute_class_accuracies(flat_pred, flat_label, num_classes)
+    #global_accuracy = compute_global_accuracy(flat_pred, flat_label)
+    #class_accuracies = compute_class_accuracies(flat_pred, flat_label, num_classes)
+    global_accuracy = 0
+    class_accuracies = 0
 
-    prec = precision_score(flat_pred, flat_label, average=score_averaging)
-    rec = recall_score(flat_pred, flat_label, average=score_averaging)
-    f1 = f1_score(flat_pred, flat_label, average=score_averaging)
+    eval_semantic_results = eval_semantic_segmentation.eval_semantic_segmentation(
+        np.reshape(pred, (1, pred.shape[0], pred.shape[1])),
+        np.reshape(label, (1, label.shape[0], label.shape[1])))
+
+    prec = precision_score(flat_label, flat_pred, labels=labels, average=score_averaging)
+    rec = recall_score(flat_label, flat_pred, labels=labels, average=score_averaging)
+    f1 = f1_score(flat_label, flat_pred, labels=labels, average=score_averaging)
 
     iou = compute_mean_iou(flat_pred, flat_label)
 
-    return global_accuracy, class_accuracies, prec, rec, f1, iou
+    class_results = dict(enumerate(eval_semantic_results["class_accuracy"]))
+    #remove nan
+    class_results = {k: class_results[k] for k in class_results if not isnan(class_results[k])}
+
+    return eval_semantic_results["pixel_accuracy"], class_results, prec, rec, f1, iou

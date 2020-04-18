@@ -1,30 +1,28 @@
-from asyncore import dispatcher
-
+#from asyncore import dispatcher
 from core import metrics
-from core import helpers
+#from core import helpers
 import numpy as np
 import cv2
 import math
 import os
 import glob
 from random import randrange
+from collections import Counter
 from core import eval_semantic_segmentation
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
 
 CLASS_VALUE = -1
 OUT_CLASS_VALUE = -2
-WRITE_REGIONS = False
-CLASS_VALUE_SHOW = 255
+WRITE_REGIONS = True
+CLASS_VALUE_SHOW = 230
 OUT_CLASS_VALUE_SHOW = 0
 
 MAX_DISTANCE = 1
 
-def evaluate(pred, gt, regionPerClass='all', printPerClassMetrics=False, removeTinyRegions=False, ignoreValueZero=False, ignoreBackgroundFloorClasses=False):
-    isPredRgb = len(pred.shape) == 3
-    if isPredRgb:
-        unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 3)})
-    else:
-        unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 1)})[:, 0]
-
+def evaluate(pred, gt, gt_regions, regionPerClass='all', discartTinyRegions=False, ignoreValueZero=False, meanPondered=False):
+    unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 3)})
     results = {}
 
     if WRITE_REGIONS:
@@ -34,57 +32,70 @@ def evaluate(pred, gt, regionPerClass='all', printPerClassMetrics=False, removeT
     print('Regions founded: ', str(len(unique_pixels)))
     discartedRegions = 0
 
-    indicesObj1 = np.where(gt > 2)
-    indicesObj2 = np.where(gt == 0)
-
-    totalObjectPoints = (len(indicesObj1[0]) if len(indicesObj1) > 0 else 0) + (len(indicesObj2[0]) if len(indicesObj2) > 0 else 0)
-
-    for i, region in enumerate(unique_pixels):
-        if isPredRgb:
-            regionValueZero = np.all(region == 0)
-            indices = np.where(np.all(pred == region, axis=2 if isPredRgb else 1))
-        else:
-            indices = np.where(pred == region)
-            regionValueZero = region == 0
-
+    for i, region_pred in enumerate(unique_pixels):
+        regionValueZero = np.all(region_pred == 0)
         if ignoreValueZero and regionValueZero:
             continue
 
-        x1 = np.min(indices[0])
-        x2 = np.max(indices[0])
-        y1 = np.min(indices[1])
-        y2 = np.max(indices[1])
+        indices = np.where(np.all(pred == region_pred, axis=2))
 
-        croppedPred = pred[x1:x2+1, y1:y2+1].copy().astype(int)
-        croppedGt = gt[x1:x2+1, y1:y2+1].copy().astype(int)
+        points = len(indices[0])
+
+        if discartTinyRegions and points < 11:
+            discartedRegions += 1
+            continue
+
+        x1p = np.min(indices[0])
+        x2p = np.max(indices[0])
+        y1p = np.min(indices[1])
+        y2p = np.max(indices[1])
 
         unique_pixels_gt, unique_pixels_count_gt = np.unique(gt[indices], return_counts=True)
-        most_frequent_color = unique_pixels_gt[unique_pixels_count_gt == np.max(unique_pixels_count_gt)]
+        class_gt = unique_pixels_gt[unique_pixels_count_gt == np.max(unique_pixels_count_gt)]
+        class_gt = np.max(class_gt)  # in case of draw
+
+        gt_regions_for_pred = gt_regions[indices]
+        unique_pixels_region_gt, unique_pixels_count_region_gt = np.unique(gt_regions_for_pred.reshape(-1, gt_regions_for_pred.shape[-1]), axis=0, return_counts=True)
+        region_gt = unique_pixels_region_gt[unique_pixels_count_region_gt == np.max(unique_pixels_count_region_gt)][0]
+
+        #unique_pixels_region_gt = np.vstack({tuple(r) for r in gt_regions_for_pred.reshape(-1, 3)})
+        #unique_pixels_count_region_gt = []
+        #for unique_pixel_region_gt in unique_pixels_region_gt:
+        #    nique_pixels_gt, unique_pixels_count_gt = np.unique(gt[indices], return_counts=True)
+        #    unique_pixels_count_region_gt.append(len(np.where(np.all(unique_pixels_region_gt == unique_pixel_region_gt, axis=2))))
+
+        #region_gt = unique_pixels_region_gt[unique_pixels_count_region_gt.index(np.max(unique_pixels_count_region_gt))]
+
+        indices_region_gt = np.where(np.all(gt_regions == region_gt, axis=2))
+
+        x1gt = np.min(indices_region_gt[0])
+        x2gt = np.max(indices_region_gt[0])
+        y1gt = np.min(indices_region_gt[1])
+        y2gt = np.max(indices_region_gt[1])
+
+        x1 = x1p if x1p < x1gt else x1gt
+        x2 = x2p if x2p > x2gt else x2gt
+        y1 = y1p if y1p < y1gt else y1gt
+        y2 = y2p if y2p > y2gt else y2gt
+
+        #crop by the bigger object size
+        croppedPred = pred[x1:x2 + 1, y1:y2 + 1].copy().astype(int)
+        croppedGt = gt_regions[x1:x2 + 1, y1:y2 + 1].copy().astype(int)
 
         if WRITE_REGIONS:
             cv2.imwrite('tests/'+str(i)+'croppedPred.png', croppedPred)
-            cv2.imwrite('tests/'+str(i)+'croppedGt.png', helpers.depthLabelToRgb(croppedGt))
+            cv2.imwrite('tests/'+str(i)+'croppedGt.png', croppedGt)
 
-        most_frequent_color = np.max(most_frequent_color) #in case of draw
+        #set regions colors to class values
+        croppedGt[np.where(np.all(croppedGt == region_gt, axis=2))] = CLASS_VALUE
+        croppedGt[np.where(np.all(croppedGt != CLASS_VALUE, axis=2))] = OUT_CLASS_VALUE
 
-        np.putmask(croppedGt, croppedGt != most_frequent_color, OUT_CLASS_VALUE)
-        np.putmask(croppedGt, croppedGt == most_frequent_color, CLASS_VALUE)
+        croppedPred[np.where(np.all(croppedPred == region_pred, axis=2))] = CLASS_VALUE
+        croppedPred[np.where(np.all(croppedPred != CLASS_VALUE, axis=2))] = OUT_CLASS_VALUE
 
-        if isPredRgb:
-            croppedPred[np.where(np.all(croppedPred == region, axis=2))] = CLASS_VALUE
-        else:
-            croppedPred[np.where(croppedPred == region)] = CLASS_VALUE
-
-        np.putmask(croppedPred, croppedPred != CLASS_VALUE, OUT_CLASS_VALUE)
-        if isPredRgb:
-            croppedPred = croppedPred[:, :, 0]
-
-        points = croppedPred.size
-
-        if removeTinyRegions and points < 5: #len(unique_pixels_gt) == 1 and
-            discartedRegions += 1
-            #print('Discarted region with shape '+str(croppedPred.shape))
-            continue
+        #convert 3d color to 1d
+        croppedPred = croppedPred[:, :, 0]
+        croppedGt = croppedGt[:, :, 0]
 
         if WRITE_REGIONS:
             coloredCroppedPred = croppedPred.copy().astype(int)
@@ -104,27 +115,39 @@ def evaluate(pred, gt, regionPerClass='all', printPerClassMetrics=False, removeT
         np.putmask(croppedGt, croppedGt == CLASS_VALUE, 1)
         np.putmask(croppedGt, croppedGt == OUT_CLASS_VALUE, 0)
 
-        accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(croppedPred, croppedGt, 2, score_averaging="binary")
-        """
-        eval_semantic_results = eval_semantic_segmentation.eval_semantic_segmentation(
-            np.reshape(croppedPred, (1, croppedPred.shape[0], croppedPred.shape[1])),
-            np.reshape(croppedGt, (1, croppedGt.shape[0], croppedGt.shape[1])))
+        flat_pred = croppedPred.flatten()
+        flat_label = croppedGt.flatten()
+
+        class_accuracies = metrics.compute_class_accuracies(flat_pred, flat_label, 2)
+
+        prec = precision_score(flat_label, flat_pred, average="binary")
+        rec = recall_score(flat_label, flat_pred, average="binary")
+        f1 = f1_score(flat_label, flat_pred, average="binary")
+
+        #accuracy, class_accuracies, prec, rec, f1, iou = metrics.evaluate_segmentation(croppedPred, croppedGt, 2, score_averaging="binary")
+
+        #eval_semantic_results = eval_semantic_segmentation.eval_semantic_segmentation(
+        #    np.reshape(croppedPred, (1, croppedPred.shape[0], croppedPred.shape[1])),
+        #    np.reshape(croppedGt, (1, croppedGt.shape[0], croppedGt.shape[1])))
 
         intersection = np.logical_and(croppedPred, croppedGt)
         union = np.logical_or(croppedPred, croppedGt)
-        iou_score = np.sum(intersection) / np.sum(union)
-        """
+        iou = np.sum(intersection) / np.sum(union)
 
-        if not results.get(most_frequent_color):
-            results[most_frequent_color] = []
+        if not results.get(class_gt):
+            results[class_gt] = {}
 
-        classPoints = len(croppedPred[croppedPred == 1])
+        if not results[class_gt].get(str(region_gt)):
+            results[class_gt][str(region_gt)] = []
 
-        results[most_frequent_color].append({
+        predPoints = len(croppedPred[croppedPred == 1])
+        #gtPoints = len(croppedGt[croppedGt == 1])
+
+        results[class_gt][str(region_gt)].append({
             'id': i,
-            'region': most_frequent_color,
-            'points': classPoints,
-            'accuracy': accuracy,
+            'predPoints': predPoints,
+            #'gtPoints': gtPoints,
+            'accuracy': class_accuracies[1],
             'precision': prec,
             'recall': rec,
             'f1': f1,
@@ -136,111 +159,111 @@ def evaluate(pred, gt, regionPerClass='all', printPerClassMetrics=False, removeT
 
     metricsPerClass = {}
 
-    for resultRegion in results.keys():
-        if regionPerClass == 'all': #'only_best_precision'
-            totalPoints = 0
-            ponderedAccuracy = 0.0
-            ponderedPrecision = 0.0
-            ponderedRecall = 0.0
-            ponderedF1 = 0.0
-            ponderedIou = 0.0
+    for class_region in results.keys():
+        ponderedWeight = 0
+        totalPoints = 0
+        instancesGt = 0
+        instancesPred = 0
+        ponderedAccuracy = 0.0
+        ponderedPrecision = 0.0
+        ponderedRecall = 0.0
+        ponderedF1 = 0.0
+        ponderedIou = 0.0
 
-            for prediction in results[resultRegion]:
-                totalPoints += prediction['points']
+        for class_instance in results[class_region]:
+            instancesGt += 1
 
-                ponderedAccuracy += prediction['accuracy'] * prediction['points']
-                ponderedPrecision += prediction['precision'] * prediction['points']
-                ponderedRecall += prediction['recall'] * prediction['points']
-                ponderedF1 += prediction['f1'] * prediction['points']
-                ponderedIou += prediction['iou'] * prediction['points']
+            if regionPerClass == 'only_best_iou': #choice best iou region proposal on a instance class
+                idxBestPrecision = -1
 
-            metricsPerClass[resultRegion] = {
-                'points': totalPoints,
-                'accuracy': ponderedAccuracy / totalPoints,
-                'precision': ponderedPrecision / totalPoints,
-                'recall': ponderedRecall / totalPoints,
-                'f1': ponderedF1 / totalPoints,
-                'iou': ponderedIou / totalPoints,
-            }
-        elif regionPerClass == 'only_best_precision':
-            idxBestPrecision = -1
-            for idx, prediction in enumerate(results[resultRegion]):
-                if idxBestPrecision == -1 or results[resultRegion][idx]['iou'] > results[resultRegion][idxBestPrecision]['iou']:
-                    idxBestPrecision = idx
+                for idx, region_pred in enumerate(results[class_region][class_instance]):
+                    if idxBestPrecision == -1 or region_pred['iou'] > results[class_region][class_instance][idxBestPrecision]['iou']:
+                        idxBestPrecision = idx
 
-            prediction = results[resultRegion][idxBestPrecision]
+                instancesPred += 1
+                region_pred = results[class_region][class_instance][idxBestPrecision]
+                totalPoints += region_pred['predPoints']
 
-            metricsPerClass[resultRegion] = {
-                'region': resultRegion,
-                'points': prediction['points'],
-                'accuracy': prediction['accuracy'],
-                'precision': prediction['precision'],
-                'recall': prediction['recall'],
-                'f1': prediction['f1'],
-                'iou': prediction['iou']
-            }
+                if meanPondered:
+                    currPoints = region_pred['predPoints']
+                    ponderedWeight += region_pred['predPoints']
+                else:
+                    currPoints = 1
+                    ponderedWeight += 1
 
-    if ignoreBackgroundFloorClasses:
-        if metricsPerClass.get(1):
-            del metricsPerClass[1]
-        if metricsPerClass.get(2):
-            del metricsPerClass[2]
+                ponderedAccuracy += region_pred['accuracy'] * currPoints
+                ponderedPrecision += region_pred['precision'] * currPoints
+                ponderedRecall += region_pred['recall'] * currPoints
+                ponderedF1 += region_pred['f1'] * currPoints
+                ponderedIou += region_pred['iou'] * currPoints
+            else:
+                totalRegionPoints = 0
+                ponderedRegionAccuracy = 0.0
+                ponderedRegionPrecision = 0.0
+                ponderedRegionRecall = 0.0
+                ponderedRegionF1 = 0.0
+                ponderedRegionIou = 0.0
+
+                for region_pred in results[class_region][class_instance]:
+                    instancesPred += 1
+                    currPoints = region_pred['predPoints']
+                    totalRegionPoints += region_pred['predPoints']
+
+                    ponderedRegionAccuracy += region_pred['accuracy'] * currPoints
+                    ponderedRegionPrecision += region_pred['precision'] * currPoints
+                    ponderedRegionRecall += region_pred['recall'] * currPoints
+                    ponderedRegionF1 += region_pred['f1'] * currPoints
+                    ponderedRegionIou += region_pred['iou'] * currPoints
+
+                if meanPondered:
+                    currPoints = totalRegionPoints
+                    ponderedWeight += totalRegionPoints
+                else:
+                    currPoints = 1
+                    ponderedWeight += 1
+
+                ponderedAccuracy += (ponderedRegionAccuracy / totalRegionPoints) * currPoints
+                ponderedPrecision += (ponderedRegionPrecision / totalRegionPoints) * currPoints
+                ponderedRecall += (ponderedRegionRecall / totalRegionPoints) * currPoints
+                ponderedF1 += (ponderedRegionF1 / totalRegionPoints) * currPoints
+                ponderedIou += (ponderedRegionIou / totalRegionPoints) * currPoints
+
+        metricsPerClass[class_region] = {
+            'points': totalPoints,
+            'instancesGt': instancesGt,
+            'instancesPred': instancesPred,
+            'accuracy': ponderedAccuracy / ponderedWeight,
+            'precision': ponderedPrecision / ponderedWeight,
+            'recall': ponderedRecall / ponderedWeight,
+            'f1': ponderedF1 / ponderedWeight,
+            'iou': ponderedIou / ponderedWeight,
+        }
 
     totalAccuracy = 0.0
     totalPrec = 0.0
     totalRec = 0.0
     totalF1 = 0.0
     totalIou = 0.0
+    totalInstancesGt = 0
+    totalInstancesPred = 0
+    numClasses = len(metricsPerClass)
 
-    totalSegmentedObjectPoints = 0
+    for idx, metricLabel in enumerate(metricsPerClass):
+        totalAccuracy += metricsPerClass[metricLabel]['accuracy']
+        totalPrec += metricsPerClass[metricLabel]['precision']
+        totalRec += metricsPerClass[metricLabel]['recall']
+        totalF1 += metricsPerClass[metricLabel]['f1']
+        totalIou += metricsPerClass[metricLabel]['iou']
+        totalInstancesGt += metricsPerClass[metricLabel]['instancesGt']
+        totalInstancesPred += metricsPerClass[metricLabel]['instancesPred']
 
-    if not ignoreBackgroundFloorClasses:
-        for idx, label in enumerate(metricsPerClass):
-            metricLabel = metricsPerClass[label]
-            totalAccuracy += metricLabel['accuracy']
-            totalPrec += metricLabel['precision']
-            totalRec += metricLabel['recall']
-            totalF1 += metricLabel['f1']
-            totalIou += metricLabel['iou']
+    totalAccuracy = totalAccuracy / numClasses
+    totalPrec = totalPrec / numClasses
+    totalRec = totalRec / numClasses
+    totalF1 = totalF1 / numClasses
+    totalIou = totalIou / numClasses
 
-            if label != 1 and label != 2:
-                totalSegmentedObjectPoints += metricLabel['points']
-
-        totalAccuracy = totalAccuracy / len(metricsPerClass)
-        totalPrec = totalPrec / len(metricsPerClass)
-        totalRec = totalRec / len(metricsPerClass)
-        totalF1 = totalF1 / len(metricsPerClass)
-        totalIou = totalIou / len(metricsPerClass)
-    else:
-        totalPoints = 0
-        for idx, label in enumerate(metricsPerClass):
-            metricLabel = metricsPerClass[label]
-            totalPoints += metricLabel['points']
-            totalAccuracy += metricLabel['accuracy'] * metricLabel['points']
-            totalPrec += metricLabel['precision'] * metricLabel['points']
-            totalRec += metricLabel['recall'] * metricLabel['points']
-            totalF1 += metricLabel['f1'] * metricLabel['points']
-            totalIou += metricLabel['iou'] * metricLabel['points']
-
-        totalSegmentedObjectPoints = totalPoints
-
-        if totalPoints > 0:
-            totalAccuracy = totalAccuracy / totalPoints
-            totalPrec = totalPrec / totalPoints
-            totalRec = totalRec / totalPoints
-            totalF1 = totalF1 / totalPoints
-            totalIou = totalIou / totalPoints
-
-    if printPerClassMetrics:
-        for resultRegion in metricsPerClass.keys():
-            print("region: ", str(resultRegion))
-            print("totalAccuracy: ", str(metricsPerClass[resultRegion]['accuracy']))
-            print("totalPrec: ", str(metricsPerClass[resultRegion]['precision']))
-            print("totalRec: ", str(metricsPerClass[resultRegion]['recall']))
-            print("totalF1: ", str(metricsPerClass[resultRegion]['f1']))
-            print("totalIou: ", str(metricsPerClass[resultRegion]['iou']))
-
-    return totalAccuracy, totalPrec, totalRec, totalF1, totalIou, metricsPerClass, (totalSegmentedObjectPoints / totalObjectPoints) * 100
+    return totalAccuracy, totalPrec, totalRec, totalF1, totalIou, metricsPerClass, totalInstancesGt, totalInstancesPred
 
 def check_pixel_close_region(pred, x1, y1, x2, y2):
     if x2 > - 1 and x2 < len(pred) and y2 > -1 and y2 < len(pred[0]) and pred[x2][y2] != -1:
@@ -295,3 +318,19 @@ def split_classes_to_regions(pred):
 
     print("Finished, colors used: " + str(countColor) + ".")
     return predWithRegions
+
+
+def join_regions_into_classes(pred, gt):
+    unique_pixels = np.vstack({tuple(r) for r in pred.reshape(-1, 3)})
+    result = pred.copy().astype(int)
+
+    for i, region_pred in enumerate(unique_pixels):
+        indices = np.where(np.all(pred == region_pred, axis=2))
+
+        unique_pixels_gt, unique_pixels_count_gt = np.unique(gt[indices], return_counts=True)
+        class_gt = unique_pixels_gt[unique_pixels_count_gt == np.max(unique_pixels_count_gt)]
+        class_gt = np.max(class_gt)  # in case of draw
+
+        result[indices] = class_gt
+
+    return result[:, :, 0]

@@ -1,0 +1,13 @@
+Mean elapsed time to total processed files: 187.6 seconds
+Mean total processed files: 75.0
+Total number of runs: 10
+Mean seconds to process per image: 1.227222147623698
+Mean opened threads during process: 7.0
+Mean GPU Percent Usage during process: 0.9013333333333333
+Mean GPU Memory Usage during process: 211.03701742933276
+Mean CPU Memory Usage during process: 2907.951093077333
+Mean Process CPU Percent Usage during process: 346.0981081081084
+Mean CPU(0) Percent Usage during process: 83.30333333333324
+Mean CPU(1) Percent Usage during process: 83.09253333333326
+Mean CPU(2) Percent Usage during process: 87.38839999999993
+Mean CPU(3) Percent Usage during process: 93.70573333333331

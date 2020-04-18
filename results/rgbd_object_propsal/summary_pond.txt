@@ -1,0 +1,2250 @@
+Mean elapsed time to total processed files: 17232.0 seconds
+Mean total processed files: 75.0
+Total number of runs: 1
+Mean seconds to process per image: 229.7617
+Mean CPU Memory Usage during process: 8947.67098666667
+Mean Process CPU Percent Usage during process: 75.2364444444445
+
+
+
+=======================================================================
+Dataset: semantics3d_raw
+----------------------------------------------------------------------
+Metric type: region_class_all
+
+ - Accuracy: 70.28135792279825
+ - Precision: 50.73921184461433
+ - Recall: 87.72248507626664
+ - F1: 56.69876373293996
+ - Iou: 53.39108199168785
+ - Total instances gt: 17.0
+ - Total instances pred: 89.15384615384616
+
+Classes: 
+
+ Class: parede
+ - Accuracy: 70.75911856089847
+ - Precision: 52.11227729494434
+ - Recall: 94.18451452737285
+ - F1: 61.1787528631702
+ - Iou: 55.45240040034528
+ Class: mesa
+ - Accuracy: 59.34748119571065
+ - Precision: 42.70688331792094
+ - Recall: 73.6359349853206
+ - F1: 50.04071036992425
+ - Iou: 47.04639898701275
+ Class: __ignore__
+ - Accuracy: 71.4545712098211
+ - Precision: 41.42428249737898
+ - Recall: 83.10143399524114
+ - F1: 47.78550685434438
+ - Iou: 49.42716338158496
+ Class: chao
+ - Accuracy: 64.68983044130403
+ - Precision: 51.54704204952624
+ - Recall: 75.30696928553724
+ - F1: 56.66656842111005
+ - Iou: 51.87521636683532
+ Class: lampada
+ - Accuracy: 25.01784616819394
+ - Precision: 20.747735292522922
+ - Recall: 26.590680240706128
+ - F1: 22.07897226194799
+ - Iou: 20.32495278122005
+ Class: travesseiro
+ - Accuracy: 17.04409640975112
+ - Precision: 17.12352541443572
+ - Recall: 16.008100559409016
+ - F1: 14.909855578639378
+ - Iou: 12.84115223901527
+ Class: teto
+ - Accuracy: 40.83771484315426
+ - Precision: 32.52929246272865
+ - Recall: 43.622704635726016
+ - F1: 34.03016613875471
+ - Iou: 31.840444981712324
+ Class: sofa
+ - Accuracy: 25.674025061294525
+ - Precision: 17.331260406727502
+ - Recall: 31.764653606582904
+ - F1: 19.752700041044676
+ - Iou: 18.34659136457725
+ Class: cadeira
+ - Accuracy: 33.28014576677297
+ - Precision: 19.693847299746682
+ - Recall: 41.57594527326461
+ - F1: 22.02536989518369
+ - Iou: 22.095635993153095
+ Class: quadro
+ - Accuracy: 20.263504771024753
+ - Precision: 16.507385732314088
+ - Recall: 33.96290565058372
+ - F1: 18.19056683463198
+ - Iou: 15.099903367126426
+ Class: porta
+ - Accuracy: 22.540503059036176
+ - Precision: 14.712670423869682
+ - Recall: 34.08819587287271
+ - F1: 15.9272933540395
+ - Iou: 15.349928064750701
+ Class: armario
+ - Accuracy: 25.368095068271096
+ - Precision: 16.7347939777886
+ - Recall: 28.561625197025858
+ - F1: 17.56310987514452
+ - Iou: 17.537129549454004
+ Class: livro
+ - Accuracy: 15.381805876671622
+ - Precision: 9.318206958536164
+ - Recall: 22.54875274636003
+ - F1: 10.855122143547739
+ - Iou: 11.825512194185334
+ Class: balcao
+ - Accuracy: 21.802171475510793
+ - Precision: 20.794584842028545
+ - Recall: 21.403201507644113
+ - F1: 20.81915366685775
+ - Iou: 20.556815652060752
+ Class: papel
+ - Accuracy: 25.188982457391656
+ - Precision: 21.172360892476036
+ - Recall: 30.651278656324298
+ - F1: 23.57420845006059
+ - Iou: 19.495618863888854
+ Class: janela
+ - Accuracy: 1.8014533403670954
+ - Precision: 1.113718050597681
+ - Recall: 7.336698308600657
+ - F1: 1.8765816683669798
+ - Iou: 1.0149479652915898
+ Class: pessoa
+ - Accuracy: 4.5964525522070465
+ - Precision: 0.5516110581372472
+ - Recall: 5.668521005179359
+ - F1: 1.0016918747051569
+ - Iou: 2.5189513852474796
+ Class: escrivaninha_carteira
+ - Accuracy: 11.660177540415487
+ - Precision: 8.709300739836097
+ - Recall: 12.863203130139448
+ - F1: 9.769561207828339
+ - Iou: 9.25237041244302
+ Class: caixa
+ - Accuracy: 11.139541397982107
+ - Precision: 8.116242791976541
+ - Recall: 11.820976906986862
+ - F1: 8.66142015824165
+ - Iou: 8.258348073909886
+ Class: persianas
+ - Accuracy: 9.548573657201796
+ - Precision: 5.768707948203106
+ - Recall: 13.068504262789487
+ - F1: 7.055390281080999
+ - Iou: 6.855207805054701
+ Class: estante_livros
+ - Accuracy: 1.328343316998352
+ - Precision: 0.6961218049764146
+ - Recall: 7.4415148418943495
+ - F1: 1.2380100464220407
+ - Iou: 0.7216234142032832
+ Class: tv
+ - Accuracy: 2.5590456135528945
+ - Precision: 2.0617443243122553
+ - Recall: 7.581395545734328
+ - F1: 2.901889134641411
+ - Iou: 1.5140861443134117
+ Class: quadro_aviso
+ - Accuracy: 16.965705120194144
+ - Precision: 12.513039342363722
+ - Recall: 21.170327599747612
+ - F1: 13.97987100181372
+ - Iou: 13.12301722885269
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: region_class_only_objects
+
+ - Accuracy: 75.92543186635992
+ - Precision: 60.64899635009372
+ - Recall: 88.51797886455276
+ - F1: 67.41608753872082
+ - Iou: 59.92008185753988
+ - Total instances gt: 17.0
+ - Total instances pred: 17.0
+
+Classes: 
+
+ Class: parede
+ - Accuracy: 79.1855865253094
+ - Precision: 66.03363090333686
+ - Recall: 96.68952402412452
+ - F1: 76.31186361392805
+ - Iou: 65.27791520038939
+ Class: mesa
+ - Accuracy: 63.714380502185406
+ - Precision: 50.54402803587198
+ - Recall: 75.23436762029274
+ - F1: 58.99980316051043
+ - Iou: 52.373769500831116
+ Class: __ignore__
+ - Accuracy: 76.7585418939611
+ - Precision: 51.26563026787687
+ - Recall: 82.97739121663894
+ - F1: 57.89839395585648
+ - Iou: 55.418724489551884
+ Class: chao
+ - Accuracy: 69.18619969030398
+ - Precision: 60.742957076516234
+ - Recall: 76.68334695482261
+ - F1: 66.07635361795839
+ - Iou: 57.981836452346414
+ Class: lampada
+ - Accuracy: 25.869715119036762
+ - Precision: 22.538843778170595
+ - Recall: 27.497583410181974
+ - F1: 23.936893756618634
+ - Iou: 21.525493193281164
+ Class: travesseiro
+ - Accuracy: 17.78729709595724
+ - Precision: 18.337461227276336
+ - Recall: 15.852553455581415
+ - F1: 15.914207695873298
+ - Iou: 13.6583590171554
+ Class: teto
+ - Accuracy: 43.32910751880391
+ - Precision: 38.74875571044726
+ - Recall: 43.293715821542165
+ - F1: 39.444192093215996
+ - Iou: 35.09343972797447
+ Class: sofa
+ - Accuracy: 27.972523588271493
+ - Precision: 21.960992817235812
+ - Recall: 34.92809259681756
+ - F1: 25.68059884382754
+ - Iou: 21.383291997412165
+ Class: cadeira
+ - Accuracy: 35.98592600170892
+ - Precision: 24.74657694611614
+ - Recall: 41.34554748899787
+ - F1: 27.670657227181884
+ - Iou: 25.20247830768095
+ Class: quadro
+ - Accuracy: 24.48128777515929
+ - Precision: 18.985809224485767
+ - Recall: 32.533050076242134
+ - F1: 20.816204370561223
+ - Iou: 18.119581394262283
+ Class: porta
+ - Accuracy: 24.633438099849144
+ - Precision: 18.541558459417935
+ - Recall: 34.50080362490225
+ - F1: 20.993248433393553
+ - Iou: 17.823381611773875
+ Class: armario
+ - Accuracy: 26.49628695093247
+ - Precision: 20.372369362728946
+ - Recall: 29.80988978280214
+ - F1: 21.66833529731131
+ - Iou: 19.31255918173295
+ Class: livro
+ - Accuracy: 15.601075192373859
+ - Precision: 10.000182125805432
+ - Recall: 22.69919779182733
+ - F1: 11.857954597971561
+ - Iou: 12.180771542327559
+ Class: balcao
+ - Accuracy: 22.24475466346692
+ - Precision: 21.679733042531428
+ - Recall: 21.723718931583967
+ - F1: 21.694083012738076
+ - Iou: 21.184871468809106
+ Class: papel
+ - Accuracy: 25.92507261663657
+ - Precision: 23.179594009627223
+ - Recall: 30.113799481896457
+ - F1: 25.16882088644246
+ - Iou: 20.421551509096528
+ Class: janela
+ - Accuracy: 2.1772148871029464
+ - Precision: 1.682368550335705
+ - Recall: 7.04440184156393
+ - F1: 2.716074694751836
+ - Iou: 1.2424067342573213
+ Class: pessoa
+ - Accuracy: 4.695580155138979
+ - Precision: 0.7382927858247785
+ - Recall: 7.6923076923076925
+ - F1: 1.3472765766343748
+ - Iou: 2.652289903285047
+ Class: escrivaninha_carteira
+ - Accuracy: 12.289736477258588
+ - Precision: 10.444640124746728
+ - Recall: 13.219145264722117
+ - F1: 11.310212336068332
+ - Iou: 10.258553745863228
+ Class: caixa
+ - Accuracy: 12.017586560766237
+ - Precision: 10.654157734716435
+ - Recall: 11.851423625977198
+ - F1: 10.617377069857339
+ - Iou: 9.471842316935712
+ Class: persianas
+ - Accuracy: 11.552354438906857
+ - Precision: 8.17652790684426
+ - Recall: 13.497176934810417
+ - F1: 9.870112219203481
+ - Iou: 8.620308812009462
+ Class: estante_livros
+ - Accuracy: 2.6151638891954527
+ - Precision: 0.17506631299734748
+ - Recall: 4.733727810650888
+ - F1: 0.33764556168746046
+ - Iou: 1.3548348027324204
+ Class: tv
+ - Accuracy: 4.0963480963480965
+ - Precision: 3.744209655266548
+ - Recall: 7.6923076923076925
+ - F1: 5.036780316505813
+ - Iou: 2.488354845080896
+ Class: quadro_aviso
+ - Accuracy: 18.196389543723974
+ - Precision: 14.315795893726857
+ - Recall: 21.243153131698023
+ - F1: 16.22890932008791
+ - Iou: 14.387724339499469
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: class_prediction
+
+ - Accuracy: 90.95806415264424
+ - Precision: 93.25320941130607
+ - Recall: 90.95806415264424
+ - F1: 91.47348906562559
+ - Iou: 70.5392178651513
+ - Total instances gt: 0.0
+ - Total instances pred: 0.0
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 61.86102482748791
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: parede
+ - Accuracy: 90.03650623367409
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: chao
+ - Accuracy: 86.1495673556968
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: armario
+ - Accuracy: 97.74626269831968
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cadeira
+ - Accuracy: 90.94652999911904
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sofa
+ - Accuracy: 96.81026810835424
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa
+ - Accuracy: 89.53231010066608
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: porta
+ - Accuracy: 97.26602540162189
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: janela
+ - Accuracy: 99.91979172584813
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: estante_livros
+ - Accuracy: 99.74535809018566
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro
+ - Accuracy: 96.67379477059932
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: balcao
+ - Accuracy: 99.2768148659369
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: persianas
+ - Accuracy: 97.77119836941466
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: escrivaninha_carteira
+ - Accuracy: 93.96137930820696
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: prateleira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: comoda
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: travesseiro
+ - Accuracy: 90.68081001241872
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: espelho
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tapete
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: roupa
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: teto
+ - Accuracy: 88.33394857882003
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: livro
+ - Accuracy: 79.30561822256668
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: geladeira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tv
+ - Accuracy: 99.94668190853174
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: papel
+ - Accuracy: 62.704789373849
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: toalha
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina_chuveiro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: caixa
+ - Accuracy: 98.95807888901199
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro_aviso
+ - Accuracy: 97.1167287911768
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pessoa
+ - Accuracy: 95.07804809450148
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa_cabeceira_cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: vaso_sanitario
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pia
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: lampada
+ - Accuracy: 77.08826309133197
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: banheira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sacola_mochila
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mean
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+
+----------------------------------------------------------------------
+=======================================================================
+
+
+
+=======================================================================
+Dataset: putkk
+----------------------------------------------------------------------
+Metric type: region_class_all
+
+ - Accuracy: 65.04844085908339
+ - Precision: 40.27972122821824
+ - Recall: 86.39548000217945
+ - F1: 47.635579678094864
+ - Iou: 46.41540840384442
+ - Total instances gt: 32.888888888888886
+ - Total instances pred: 156.11111111111111
+
+Classes: 
+
+ Class: pessoa
+ - Accuracy: 14.881741867644468
+ - Precision: 6.0447578516301625
+ - Recall: 16.201408540316304
+ - F1: 8.229704531497719
+ - Iou: 9.752590862837836
+ Class: escrivaninha_carteira
+ - Accuracy: 16.443981511993528
+ - Precision: 14.446292028342384
+ - Recall: 11.007178124940948
+ - F1: 11.59360854815332
+ - Iou: 11.949461773039625
+ Class: chao
+ - Accuracy: 45.467961930700824
+ - Precision: 21.47303389388558
+ - Recall: 91.3574600714003
+ - F1: 29.940229913004966
+ - Iou: 28.924021440818308
+ Class: parede
+ - Accuracy: 86.22922395576663
+ - Precision: 67.97856376196775
+ - Recall: 92.57197547765415
+ - F1: 73.97041454752097
+ - Iou: 73.15215566802945
+ Class: roupa
+ - Accuracy: 21.596884605809446
+ - Precision: 14.263918884962784
+ - Recall: 22.34371186819933
+ - F1: 15.209626461723976
+ - Iou: 14.82387594637885
+ Class: armario
+ - Accuracy: 37.57482030669899
+ - Precision: 17.335403617853363
+ - Recall: 61.744003569379856
+ - F1: 23.842874193430248
+ - Iou: 24.550602675494673
+ Class: cadeira
+ - Accuracy: 68.99464371324909
+ - Precision: 21.971912303651575
+ - Recall: 80.487051491409
+ - F1: 30.44924326671551
+ - Iou: 43.24931157947279
+ Class: __ignore__
+ - Accuracy: 62.76885078938228
+ - Precision: 35.43711147603956
+ - Recall: 82.26893734613105
+ - F1: 42.81207348539336
+ - Iou: 41.86072503800287
+ Class: teto
+ - Accuracy: 43.058489701598376
+ - Precision: 18.550468771840205
+ - Recall: 66.85308549746937
+ - F1: 25.585863075667415
+ - Iou: 27.593064608100427
+ Class: mesa
+ - Accuracy: 45.28761880749448
+ - Precision: 26.149128540298676
+ - Recall: 37.49018033354531
+ - F1: 29.20002587790455
+ - Iou: 32.34341627621823
+ Class: caixa
+ - Accuracy: 40.36801524725331
+ - Precision: 34.7547417737361
+ - Recall: 47.55907031799958
+ - F1: 36.912923775828816
+ - Iou: 30.23673828551957
+ Class: janela
+ - Accuracy: 4.729118922204694
+ - Precision: 2.1620261828743317
+ - Recall: 22.086295190970194
+ - F1: 3.7771765884631057
+ - Iou: 2.6642123765330696
+ Class: lampada
+ - Accuracy: 35.41413120062465
+ - Precision: 23.668856839019625
+ - Recall: 52.87061016920398
+ - F1: 31.517257547996465
+ - Iou: 25.496482748091932
+ Class: papel
+ - Accuracy: 38.04243593053578
+ - Precision: 34.89357244388372
+ - Recall: 51.55720856356082
+ - F1: 39.79072366420786
+ - Iou: 28.56544450910014
+ Class: porta
+ - Accuracy: 31.103514960360595
+ - Precision: 23.854174661475394
+ - Recall: 40.10767937422368
+ - F1: 26.990728502242
+ - Iou: 24.954177118095195
+ Class: quadro_aviso
+ - Accuracy: 18.432446532144716
+ - Precision: 17.859124400510144
+ - Recall: 21.281899042790734
+ - F1: 18.71885631923404
+ - Iou: 15.38662101859024
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: region_class_only_objects
+
+ - Accuracy: 71.64498096490486
+ - Precision: 51.96239903385103
+ - Recall: 87.50432136326084
+ - F1: 60.77499582872118
+ - Iou: 53.73144512348773
+ - Total instances gt: 32.888888888888886
+ - Total instances pred: 32.888888888888886
+
+Classes: 
+
+ Class: pessoa
+ - Accuracy: 16.13760149476776
+ - Precision: 9.347503737813506
+ - Recall: 17.611097411164423
+ - F1: 12.048359576595955
+ - Iou: 11.747347639144756
+ Class: escrivaninha_carteira
+ - Accuracy: 16.669496839646687
+ - Precision: 15.188463406659306
+ - Recall: 10.94908723727867
+ - F1: 12.208687937920427
+ - Iou: 12.304744289552854
+ Class: chao
+ - Accuracy: 57.151523354627386
+ - Precision: 37.29557834677995
+ - Recall: 92.91693129733551
+ - F1: 49.874316474768115
+ - Iou: 39.48509550886886
+ Class: parede
+ - Accuracy: 89.78695341956518
+ - Precision: 77.73736562554716
+ - Recall: 94.85178006083159
+ - F1: 83.73604066843122
+ - Iou: 79.30585352605132
+ Class: roupa
+ - Accuracy: 22.99471817863452
+ - Precision: 18.935795680846812
+ - Recall: 21.95768573402573
+ - F1: 19.757100269547166
+ - Iou: 16.771461274202096
+ Class: armario
+ - Accuracy: 42.73662827938975
+ - Precision: 27.626331776319148
+ - Recall: 61.596176968014625
+ - F1: 35.38045757576304
+ - Iou: 30.661677005855857
+ Class: cadeira
+ - Accuracy: 75.4408416589422
+ - Precision: 35.22786326686933
+ - Recall: 83.22754837346868
+ - F1: 46.11854817526519
+ - Iou: 51.93501936534377
+ Class: __ignore__
+ - Accuracy: 69.65364132927728
+ - Precision: 49.59967887066078
+ - Recall: 81.51085191221375
+ - F1: 57.14551451101051
+ - Iou: 49.540802212197455
+ Class: teto
+ - Accuracy: 49.75906778001651
+ - Precision: 27.304994782750423
+ - Recall: 68.51320411394659
+ - F1: 36.59111251015521
+ - Iou: 34.27815108195261
+ Class: mesa
+ - Accuracy: 45.857822601998805
+ - Precision: 29.536917324003586
+ - Recall: 36.86965679871084
+ - F1: 32.12853481025426
+ - Iou: 33.72733559844658
+ Class: caixa
+ - Accuracy: 42.0908015457083
+ - Precision: 37.40938136821697
+ - Recall: 49.14711656496114
+ - F1: 39.853815216651455
+ - Iou: 32.00972415454982
+ Class: janela
+ - Accuracy: 6.312237668381327
+ - Precision: 3.970843972053248
+ - Recall: 22.188462926730836
+ - F1: 6.7349017170368395
+ - Iou: 3.6769033484539997
+ Class: lampada
+ - Accuracy: 38.86023057051472
+ - Precision: 28.738182870671764
+ - Recall: 53.31544244979525
+ - F1: 36.894850972201006
+ - Iou: 29.119830381625984
+ Class: papel
+ - Accuracy: 40.30973068716772
+ - Precision: 38.224835628297924
+ - Recall: 50.32435652118077
+ - F1: 42.57711941005052
+ - Iou: 30.40920874638343
+ Class: porta
+ - Accuracy: 35.367002571255746
+ - Precision: 31.16458001292111
+ - Recall: 41.504454898839825
+ - F1: 35.12667628334029
+ - Iou: 29.81745553696436
+ Class: quadro_aviso
+ - Accuracy: 20.199269200540158
+ - Precision: 20.022468768785153
+ - Recall: 21.95872832659581
+ - F1: 20.944155572966533
+ - Iou: 17.02809807055419
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: class_prediction
+
+ - Accuracy: 90.14635726261243
+ - Precision: 90.87333712283606
+ - Recall: 90.14635726261243
+ - F1: 90.264921487153
+ - Iou: 77.14115794929042
+ - Total instances gt: 0.0
+ - Total instances pred: 0.0
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 76.67085584459305
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: parede
+ - Accuracy: 87.0837587941621
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: chao
+ - Accuracy: 96.17476045883058
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: armario
+ - Accuracy: 97.21752715274525
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cadeira
+ - Accuracy: 82.57111303554221
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sofa
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa
+ - Accuracy: 73.50977153603053
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: porta
+ - Accuracy: 99.03808143189481
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: janela
+ - Accuracy: 99.61969615567686
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: estante_livros
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: balcao
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: persianas
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: escrivaninha_carteira
+ - Accuracy: 95.7609117029032
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: prateleira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: comoda
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: travesseiro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: espelho
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tapete
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: roupa
+ - Accuracy: 94.30519225202194
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: teto
+ - Accuracy: 97.05063989159709
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: livro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: geladeira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tv
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: papel
+ - Accuracy: 91.61221025060601
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: toalha
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina_chuveiro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: caixa
+ - Accuracy: 91.15225778521976
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro_aviso
+ - Accuracy: 99.57807942775901
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pessoa
+ - Accuracy: 95.7987640671933
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa_cabeceira_cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: vaso_sanitario
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pia
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: lampada
+ - Accuracy: 72.96283020944226
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: banheira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sacola_mochila
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mean
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+
+----------------------------------------------------------------------
+=======================================================================
+
+
+
+=======================================================================
+Dataset: semantics3d_mod
+----------------------------------------------------------------------
+Metric type: region_class_all
+
+ - Accuracy: 67.0437120195373
+ - Precision: 45.50453742530109
+ - Recall: 81.08184254280376
+ - F1: 49.72288602354142
+ - Iou: 49.239244295699166
+ - Total instances gt: 17.53846153846154
+ - Total instances pred: 76.23076923076923
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 68.00214204654846
+ - Precision: 42.39525491728185
+ - Recall: 74.58708157882809
+ - F1: 43.572139085694985
+ - Iou: 46.24621457365364
+ Class: parede
+ - Accuracy: 78.11915736703837
+ - Precision: 59.565994429697746
+ - Recall: 87.72231644521192
+ - F1: 65.82060116242023
+ - Iou: 63.1456787973122
+ Class: caixa
+ - Accuracy: 16.062130442360594
+ - Precision: 7.059103959065418
+ - Recall: 26.23759391816257
+ - F1: 9.4316376165155
+ - Iou: 10.247437342074457
+ Class: pia
+ - Accuracy: 5.653760848928012
+ - Precision: 4.8315322454554215
+ - Recall: 5.696473611573787
+ - F1: 5.017686335706799
+ - Iou: 4.381168692430328
+ Class: chao
+ - Accuracy: 68.22776322892715
+ - Precision: 50.568970381678334
+ - Recall: 81.83707537672892
+ - F1: 53.95449553737366
+ - Iou: 51.71131572669251
+ Class: porta
+ - Accuracy: 23.958342987354417
+ - Precision: 16.94699798238018
+ - Recall: 33.2288086266827
+ - F1: 20.042795728513735
+ - Iou: 18.348298686617866
+ Class: armario
+ - Accuracy: 13.679799560968037
+ - Precision: 7.965777697104256
+ - Recall: 16.71613633049024
+ - F1: 10.331521905615462
+ - Iou: 9.212229836895549
+ Class: papel
+ - Accuracy: 43.72199361327845
+ - Precision: 31.200341207899562
+ - Recall: 49.572898609460154
+ - F1: 33.428564542435026
+ - Iou: 32.129217772349406
+ Class: prateleira
+ - Accuracy: 6.005901159650732
+ - Precision: 3.267717039172899
+ - Recall: 7.092387681642448
+ - F1: 4.434805134082966
+ - Iou: 4.419256349990531
+ Class: teto
+ - Accuracy: 30.267662890552533
+ - Precision: 25.32225136382289
+ - Recall: 34.00703605243465
+ - F1: 26.58114029879957
+ - Iou: 25.37406339200884
+ Class: sofa
+ - Accuracy: 9.304060898868263
+ - Precision: 3.0084778199932805
+ - Recall: 18.837042043880917
+ - F1: 4.601313810801537
+ - Iou: 5.5111729192194465
+ Class: travesseiro
+ - Accuracy: 5.624602044153025
+ - Precision: 4.01219801285193
+ - Recall: 4.090097747556311
+ - F1: 3.9192652273410697
+ - Iou: 3.98260568719852
+ Class: cadeira
+ - Accuracy: 32.088365058762655
+ - Precision: 15.876428909430407
+ - Recall: 44.276284804614924
+ - F1: 18.554185523003568
+ - Iou: 20.767490225676053
+ Class: quadro_aviso
+ - Accuracy: 12.568685749464576
+ - Precision: 6.86735021525123
+ - Recall: 19.457645809385962
+ - F1: 9.173299422735367
+ - Iou: 8.50855071366329
+ Class: escrivaninha_carteira
+ - Accuracy: 24.569577687078695
+ - Precision: 14.689364370384903
+ - Recall: 32.67795143201789
+ - F1: 17.136097169783696
+ - Iou: 17.804817129852264
+ Class: quadro
+ - Accuracy: 9.874659777403359
+ - Precision: 6.385822094041818
+ - Recall: 11.084143488012508
+ - F1: 7.521418920236625
+ - Iou: 6.840611486814516
+ Class: lampada
+ - Accuracy: 5.103528945786936
+ - Precision: 1.595255999514781
+ - Recall: 5.59635785766439
+ - F1: 2.4635851979156236
+ - Iou: 3.037120511735169
+ Class: mesa
+ - Accuracy: 5.536505113529895
+ - Precision: 3.2733717578050032
+ - Recall: 6.847609118759496
+ - F1: 4.189410024618363
+ - Iou: 4.17769078532175
+ Class: sacola_mochila
+ - Accuracy: 11.61667790463954
+ - Precision: 11.150762136195368
+ - Recall: 11.348861738613772
+ - F1: 9.914326852396735
+ - Iou: 9.291947782492468
+ Class: roupa
+ - Accuracy: 15.167263440528913
+ - Precision: 12.841113566569632
+ - Recall: 11.543816158709072
+ - F1: 9.360557640864547
+ - Iou: 10.051698052721077
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: region_class_only_objects
+
+ - Accuracy: 72.78181435320352
+ - Precision: 54.37694181982029
+ - Recall: 81.58185979968279
+ - F1: 59.433094115634255
+ - Iou: 55.263598413809156
+ - Total instances gt: 17.53846153846154
+ - Total instances pred: 17.53846153846154
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 74.6653901108088
+ - Precision: 55.52610117018294
+ - Recall: 76.22620949955933
+ - F1: 57.133311106139075
+ - Iou: 54.26134187573629
+ Class: parede
+ - Accuracy: 82.98932552636809
+ - Precision: 72.3032696365502
+ - Recall: 89.53614243321886
+ - F1: 78.50022453758771
+ - Iou: 70.57806951131982
+ Class: caixa
+ - Accuracy: 17.338099939905078
+ - Precision: 9.834161237175518
+ - Recall: 26.56142083875728
+ - F1: 12.637382436485794
+ - Iou: 11.765274391007852
+ Class: pia
+ - Accuracy: 5.759035842226446
+ - Precision: 5.171598197293006
+ - Recall: 5.547666345416282
+ - F1: 5.3530353984316275
+ - Iou: 4.54173954748025
+ Class: chao
+ - Accuracy: 73.46840560528712
+ - Precision: 57.630960785274944
+ - Recall: 84.5085497397031
+ - F1: 62.35512332148952
+ - Iou: 57.11028203101025
+ Class: porta
+ - Accuracy: 24.820480606318405
+ - Precision: 19.807389969233036
+ - Recall: 35.70964906610263
+ - F1: 23.584096990722976
+ - Iou: 19.30189290820075
+ Class: armario
+ - Accuracy: 14.55508322577272
+ - Precision: 10.425340515250534
+ - Recall: 17.99099467253173
+ - F1: 12.947621905983933
+ - Iou: 10.353674396622493
+ Class: papel
+ - Accuracy: 44.54202136628857
+ - Precision: 34.310108021316616
+ - Recall: 51.05575941887663
+ - F1: 36.80450960454475
+ - Iou: 33.752038511708946
+ Class: prateleira
+ - Accuracy: 6.4592760180995485
+ - Precision: 3.649678494879733
+ - Recall: 6.765257697825847
+ - F1: 4.741462660014696
+ - Iou: 4.851945233379907
+ Class: teto
+ - Accuracy: 30.916311175718892
+ - Precision: 28.114046175888774
+ - Recall: 35.9425200033303
+ - F1: 30.0728249974176
+ - Iou: 26.646760840534178
+ Class: sofa
+ - Accuracy: 14.123765238820113
+ - Precision: 3.864383497513399
+ - Recall: 14.739197222387423
+ - F1: 5.71899735654241
+ - Iou: 8.209932972895043
+ Class: travesseiro
+ - Accuracy: 5.734753051826223
+ - Precision: 4.158482205196474
+ - Recall: 3.947333539521937
+ - F1: 4.05015776302905
+ - Iou: 4.0804102440740335
+ Class: cadeira
+ - Accuracy: 34.671061866961615
+ - Precision: 20.721776453490083
+ - Recall: 44.08541597138044
+ - F1: 24.907612556640252
+ - Iou: 23.531285560952085
+ Class: quadro_aviso
+ - Accuracy: 14.692309138027568
+ - Precision: 9.667167474693294
+ - Recall: 20.399680263696528
+ - F1: 12.578957226365839
+ - Iou: 10.335049644093946
+ Class: escrivaninha_carteira
+ - Accuracy: 28.983310402213387
+ - Precision: 17.83043390738362
+ - Recall: 30.779635406685745
+ - F1: 20.463273090569388
+ - Iou: 21.394610484891206
+ Class: quadro
+ - Accuracy: 10.500316272267353
+ - Precision: 7.613392423867832
+ - Recall: 11.977783139554434
+ - F1: 9.004682807277918
+ - Iou: 7.640980975080271
+ Class: lampada
+ - Accuracy: 7.140430769230768
+ - Precision: 1.0492941798142976
+ - Recall: 2.813765182186235
+ - F1: 1.5285643591576399
+ - Iou: 3.992036526906732
+ Class: mesa
+ - Accuracy: 6.346224795311681
+ - Precision: 4.838629221329875
+ - Recall: 7.600689547092933
+ - F1: 5.913011673626141
+ - Iou: 5.298291437392521
+ Class: sacola_mochila
+ - Accuracy: 12.017598045911102
+ - Precision: 11.87244761991657
+ - Recall: 11.513814809122909
+ - F1: 10.68559450571705
+ - Iou: 9.80291596134
+ Class: roupa
+ - Accuracy: 15.444997831217528
+ - Precision: 14.249932497950313
+ - Recall: 10.519513425475784
+ - F1: 10.289091185738588
+ - Iou: 10.46265714423525
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: class_prediction
+
+ - Accuracy: 84.73377651155431
+ - Precision: 87.82972209609119
+ - Recall: 84.73377651155431
+ - F1: 85.33106313174508
+ - Iou: 59.85053716347263
+ - Total instances gt: 0.0
+ - Total instances pred: 0.0
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 78.39628320903888
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: parede
+ - Accuracy: 86.22778304827109
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: chao
+ - Accuracy: 82.00870678512959
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: armario
+ - Accuracy: 93.86463042728442
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cadeira
+ - Accuracy: 83.87720106254093
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sofa
+ - Accuracy: 94.18932702898411
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa
+ - Accuracy: 91.9999539543611
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: porta
+ - Accuracy: 81.46251001146437
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: janela
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: estante_livros
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro
+ - Accuracy: 96.85295950531135
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: balcao
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: persianas
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: escrivaninha_carteira
+ - Accuracy: 95.96112230123528
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: prateleira
+ - Accuracy: 98.64253393665159
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: comoda
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: travesseiro
+ - Accuracy: 89.09503905268156
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: espelho
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tapete
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: roupa
+ - Accuracy: 92.09785356585326
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: teto
+ - Accuracy: 84.16263448622557
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: livro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: geladeira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tv
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: papel
+ - Accuracy: 67.6873193590535
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: toalha
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina_chuveiro
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: caixa
+ - Accuracy: 77.29351883541288
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro_aviso
+ - Accuracy: 94.97239521779555
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pessoa
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa_cabeceira_cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: vaso_sanitario
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pia
+ - Accuracy: 98.01394200974694
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: lampada
+ - Accuracy: 66.4565562014041
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: banheira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sacola_mochila
+ - Accuracy: 91.49112208888174
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mean
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+
+----------------------------------------------------------------------
+=======================================================================
+
+
+
+=======================================================================
+Dataset: active_vision
+----------------------------------------------------------------------
+Metric type: region_class_all
+
+ - Accuracy: 64.96264575499782
+ - Precision: 47.34240568799035
+ - Recall: 89.5193516155262
+ - F1: 54.0678496218409
+ - Iou: 48.54181022537807
+ - Total instances gt: 16.475
+ - Total instances pred: 100.5
+
+Classes: 
+
+ Class: chao
+ - Accuracy: 55.79720015235188
+ - Precision: 48.61726620411965
+ - Recall: 70.70998251033129
+ - F1: 51.04084916543281
+ - Iou: 45.95166597204122
+ Class: parede
+ - Accuracy: 81.89060342693062
+ - Precision: 66.60575675761548
+ - Recall: 93.44092256058867
+ - F1: 72.1202512962654
+ - Iou: 68.37092763994002
+ Class: __ignore__
+ - Accuracy: 61.23982984557416
+ - Precision: 33.23266024414656
+ - Recall: 83.10081342062503
+ - F1: 40.720633171243556
+ - Iou: 41.40549527301673
+ Class: quadro
+ - Accuracy: 8.533860720348034
+ - Precision: 7.195739554013116
+ - Recall: 18.74662783886672
+ - F1: 8.929732016882799
+ - Iou: 5.327262214156585
+ Class: persianas
+ - Accuracy: 11.389817751310197
+ - Precision: 8.377838890717623
+ - Recall: 29.13658367671616
+ - F1: 10.964469066057859
+ - Iou: 7.444109792858121
+ Class: lampada
+ - Accuracy: 17.685422866555307
+ - Precision: 14.473587608206678
+ - Recall: 20.256900327511147
+ - F1: 15.56225118108608
+ - Iou: 13.80438498446535
+ Class: cadeira
+ - Accuracy: 28.512002146559603
+ - Precision: 16.130571131770203
+ - Recall: 38.22403854308628
+ - F1: 20.109834023618404
+ - Iou: 19.698741641461513
+ Class: tv
+ - Accuracy: 11.55630072885804
+ - Precision: 9.330790686822473
+ - Recall: 17.93892868582526
+ - F1: 11.26260812606984
+ - Iou: 8.253809624348833
+ Class: prateleira
+ - Accuracy: 10.988492954811345
+ - Precision: 4.618989930305744
+ - Recall: 12.092932027933863
+ - F1: 6.339028276741246
+ - Iou: 7.340407014225477
+ Class: mesa
+ - Accuracy: 22.81227416951486
+ - Precision: 13.274080298385737
+ - Recall: 26.818696682444692
+ - F1: 15.916424248506505
+ - Iou: 16.35340611614981
+ Class: livro
+ - Accuracy: 7.724191786328875
+ - Precision: 5.872003252300447
+ - Recall: 7.978013169836601
+ - F1: 6.6267743345506975
+ - Iou: 5.986878400489577
+ Class: armario
+ - Accuracy: 31.479977159193552
+ - Precision: 21.406574313580055
+ - Recall: 49.11945482551947
+ - F1: 26.046658355707798
+ - Iou: 22.349615013780376
+ Class: papel
+ - Accuracy: 11.316536211805097
+ - Precision: 9.181694414661104
+ - Recall: 15.234215168432844
+ - F1: 9.99823636706331
+ - Iou: 8.216461460958678
+ Class: escrivaninha_carteira
+ - Accuracy: 8.139320307522011
+ - Precision: 4.03732734033913
+ - Recall: 10.078383522834452
+ - F1: 5.092766543480659
+ - Iou: 5.275340456940632
+ Class: caixa
+ - Accuracy: 29.294199682489086
+ - Precision: 24.990019826161138
+ - Recall: 36.68747944637857
+ - F1: 26.42108719892104
+ - Iou: 21.830592319834423
+ Class: teto
+ - Accuracy: 21.823056563656674
+ - Precision: 15.664218029147603
+ - Recall: 31.179765996284253
+ - F1: 17.161226453925536
+ - Iou: 15.970143562506307
+ Class: sofa
+ - Accuracy: 13.776375785946762
+ - Precision: 8.715539386636763
+ - Recall: 22.96082580907756
+ - F1: 10.90863358671388
+ - Iou: 9.499808939981126
+ Class: porta
+ - Accuracy: 18.37524597597405
+ - Precision: 13.09973062652623
+ - Recall: 29.305433021061837
+ - F1: 15.59357279882887
+ - Iou: 13.032469436472843
+ Class: balcao
+ - Accuracy: 24.72011249415477
+ - Precision: 19.552668271795113
+ - Recall: 24.663533213743445
+ - F1: 20.392012758844324
+ - Iou: 19.787909841416067
+ Class: roupa
+ - Accuracy: 11.6974327706027
+ - Precision: 11.488861596275983
+ - Recall: 12.55477512263681
+ - F1: 11.23144756796198
+ - Iou: 9.770844554042732
+ Class: comoda
+ - Accuracy: 0.8047522859952567
+ - Precision: 0.32155359019103524
+ - Recall: 2.2685535270606025
+ - F1: 0.5541850494277027
+ - Iou: 0.4644520942261874
+ Class: cama
+ - Accuracy: 2.2750761487379023
+ - Precision: 1.2064634929856872
+ - Recall: 7.38500538101549
+ - F1: 1.9367817612193035
+ - Iou: 1.3375025581004092
+ Class: cortina_chuveiro
+ - Accuracy: 2.1758745084270577
+ - Precision: 0.7901362005120514
+ - Recall: 7.3989810855415765
+ - F1: 1.2594712349599182
+ - Iou: 1.2903155741405739
+ Class: vaso_sanitario
+ - Accuracy: 2.573642682113796
+ - Precision: 1.459004669252754
+ - Recall: 4.762064429689089
+ - F1: 2.100997328569376
+ - Iou: 1.6984004140146023
+ Class: tapete
+ - Accuracy: 1.7284371942757035
+ - Precision: 2.5
+ - Recall: 0.8964204652922263
+ - F1: 1.3196547283422089
+ - Iou: 1.2319949453213948
+ Class: pia
+ - Accuracy: 10.07666925353092
+ - Precision: 6.44999882945389
+ - Recall: 13.437016050990424
+ - F1: 8.346212024168478
+ - Iou: 7.255634204699662
+ Class: travesseiro
+ - Accuracy: 9.000623061320587
+ - Precision: 5.915024873182951
+ - Recall: 13.639671015639143
+ - F1: 7.286646014226123
+ - Iou: 6.671019165797149
+ Class: espelho
+ - Accuracy: 1.215335032650097
+ - Precision: 0.4406035447960491
+ - Recall: 2.1146283916633895
+ - F1: 0.6508957139596032
+ - Iou: 0.7582787900290111
+ Class: toalha
+ - Accuracy: 6.136085138109517
+ - Precision: 4.949934138349481
+ - Recall: 9.08394749366985
+ - F1: 5.947726929211764
+ - Iou: 4.514160488432088
+ Class: geladeira
+ - Accuracy: 6.813792592850285
+ - Precision: 4.24549906841887
+ - Recall: 11.404882724290903
+ - F1: 5.617026286733001
+ - Iou: 4.765361818715484
+ Class: sacola_mochila
+ - Accuracy: 3.5473978181917185
+ - Precision: 3.0134133897697235
+ - Recall: 4.881899373043734
+ - F1: 3.5613907723568454
+ - Iou: 2.8280083187566114
+ Class: estante_livros
+ - Accuracy: 1.91129965579349
+ - Precision: 0.9918484514967904
+ - Recall: 2.3717838024520805
+ - F1: 1.2911306699795349
+ - Iou: 1.4025920071917874
+ Class: quadro_aviso
+ - Accuracy: 3.161524078443026
+ - Precision: 2.951476341538877
+ - Recall: 4.815180067347889
+ - F1: 3.450025194349145
+ - Iou: 2.0585455563214805
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: region_class_only_objects
+
+ - Accuracy: 72.12217850215603
+ - Precision: 58.06441941773025
+ - Recall: 90.22800739574205
+ - F1: 66.2724436847677
+ - Iou: 55.678703514949945
+ - Total instances gt: 16.475
+ - Total instances pred: 16.475
+
+Classes: 
+
+ Class: chao
+ - Accuracy: 60.612363972510465
+ - Precision: 54.34444896092939
+ - Recall: 69.1086375801805
+ - F1: 56.87327354271383
+ - Iou: 50.748599920073154
+ Class: parede
+ - Accuracy: 86.44341822785823
+ - Precision: 76.35379815977026
+ - Recall: 94.64388487562655
+ - F1: 82.31398235577882
+ - Iou: 74.48597855566624
+ Class: __ignore__
+ - Accuracy: 68.72077821379847
+ - Precision: 47.09524441602265
+ - Recall: 84.36903386946383
+ - F1: 56.81630385667057
+ - Iou: 49.97042373823336
+ Class: quadro
+ - Accuracy: 11.390942383608675
+ - Precision: 10.515454163488345
+ - Recall: 19.06798226736679
+ - F1: 12.91542592592714
+ - Iou: 7.297976560365351
+ Class: persianas
+ - Accuracy: 15.11585285137092
+ - Precision: 11.746162876304322
+ - Recall: 28.009755421315486
+ - F1: 15.234961131685601
+ - Iou: 9.94430658586615
+ Class: lampada
+ - Accuracy: 18.588828437938822
+ - Precision: 16.277991578734902
+ - Recall: 20.62968508737907
+ - F1: 17.43844104355247
+ - Iou: 14.923190822021818
+ Class: cadeira
+ - Accuracy: 31.597550456994483
+ - Precision: 20.379098835569103
+ - Recall: 38.839296545671026
+ - F1: 25.193651240095623
+ - Iou: 22.752143755570362
+ Class: tv
+ - Accuracy: 14.168691490160143
+ - Precision: 13.063831994227682
+ - Recall: 19.77784492636681
+ - F1: 15.537637228958449
+ - Iou: 10.45250827172145
+ Class: prateleira
+ - Accuracy: 11.230508564080173
+ - Precision: 5.674366633853075
+ - Recall: 12.392935217546604
+ - F1: 7.653685520666274
+ - Iou: 7.85394063981355
+ Class: mesa
+ - Accuracy: 24.579354209452216
+ - Precision: 17.117466225319884
+ - Recall: 27.391262882940598
+ - F1: 20.099078041638545
+ - Iou: 18.653130620178374
+ Class: livro
+ - Accuracy: 8.012372969944654
+ - Precision: 6.527725496172235
+ - Recall: 7.947683159568799
+ - F1: 7.121708201588417
+ - Iou: 6.32510319197687
+ Class: armario
+ - Accuracy: 36.605818557678006
+ - Precision: 29.152229209966418
+ - Recall: 49.17502462641997
+ - F1: 34.58672080057073
+ - Iou: 27.290783107198763
+ Class: papel
+ - Accuracy: 12.673001314202722
+ - Precision: 10.820465824897841
+ - Recall: 15.471738439081816
+ - F1: 11.847313569843879
+ - Iou: 9.333711580297544
+ Class: escrivaninha_carteira
+ - Accuracy: 8.71606991383973
+ - Precision: 5.15931340537785
+ - Recall: 10.48162167901008
+ - F1: 6.645865225967181
+ - Iou: 6.009643418793779
+ Class: caixa
+ - Accuracy: 32.256969128918065
+ - Precision: 28.62533544067919
+ - Recall: 35.94906278078006
+ - F1: 29.99848295655091
+ - Iou: 24.514316751579795
+ Class: teto
+ - Accuracy: 23.808415464664122
+ - Precision: 19.140897205037536
+ - Recall: 32.0099979267189
+ - F1: 21.187423157268352
+ - Iou: 18.249608768432793
+ Class: sofa
+ - Accuracy: 15.926760851993052
+ - Precision: 12.082216390564634
+ - Recall: 23.798716728015798
+ - F1: 15.156822740094173
+ - Iou: 11.655198420416298
+ Class: porta
+ - Accuracy: 21.48113590405638
+ - Precision: 16.532077674889816
+ - Recall: 29.168788583748817
+ - F1: 19.343065642076187
+ - Iou: 15.627764606982305
+ Class: balcao
+ - Accuracy: 25.734357204058593
+ - Precision: 22.17475794190352
+ - Recall: 25.230941431963306
+ - F1: 23.082482905698402
+ - Iou: 21.466947668963865
+ Class: roupa
+ - Accuracy: 12.083500659114621
+ - Precision: 12.03695366998158
+ - Recall: 12.688300548772894
+ - F1: 11.836959049625486
+ - Iou: 10.164585986056833
+ Class: comoda
+ - Accuracy: 1.199902248289345
+ - Precision: 0.09255178492728075
+ - Recall: 1.3125000000000002
+ - F1: 0.1729106628242075
+ - Iou: 0.6319206517981771
+ Class: cama
+ - Accuracy: 3.2207459513332912
+ - Precision: 2.3481710758540784
+ - Recall: 7.492606858037925
+ - F1: 3.569233397478118
+ - Iou: 2.020641068305528
+ Class: cortina_chuveiro
+ - Accuracy: 3.086222737251404
+ - Precision: 1.9882341187080856
+ - Recall: 7.48378691372322
+ - F1: 3.072611677525263
+ - Iou: 2.020234512097246
+ Class: vaso_sanitario
+ - Accuracy: 3.144715860482124
+ - Precision: 2.3216207056041815
+ - Recall: 4.9916943521594686
+ - F1: 3.166150895248486
+ - Iou: 2.2484570215950535
+ Class: tapete
+ - Accuracy: 1.7284371942757035
+ - Precision: 2.5
+ - Recall: 0.8964204652922263
+ - F1: 1.3196547283422089
+ - Iou: 1.2319949453213948
+ Class: pia
+ - Accuracy: 10.346021045626602
+ - Precision: 7.231160741173133
+ - Recall: 13.507091228624851
+ - F1: 9.280675084737796
+ - Iou: 7.6775014116557365
+ Class: travesseiro
+ - Accuracy: 10.348320447143466
+ - Precision: 7.956933737771196
+ - Recall: 13.643465615438208
+ - F1: 9.616980811405252
+ - Iou: 8.034590760504594
+ Class: espelho
+ - Accuracy: 1.9263661918147597
+ - Precision: 0.7672135556750942
+ - Recall: 1.6073441021788129
+ - F1: 1.0386576040781648
+ - Iou: 1.2654668324871365
+ Class: toalha
+ - Accuracy: 6.935342769892664
+ - Precision: 6.055536254120562
+ - Recall: 9.121806931781453
+ - F1: 7.08933487578217
+ - Iou: 5.305653763069484
+ Class: geladeira
+ - Accuracy: 7.734413949656595
+ - Precision: 5.717674835774063
+ - Recall: 12.122477121968513
+ - F1: 7.437305992867039
+ - Iou: 5.70182566753694
+ Class: sacola_mochila
+ - Accuracy: 3.9634334781850313
+ - Precision: 3.5844549476562406
+ - Recall: 4.980130080276841
+ - F1: 4.162593005392053
+ - Iou: 3.2280476396350655
+ Class: estante_livros
+ - Accuracy: 2.0979601518026567
+ - Precision: 1.4864864864864866
+ - Recall: 2.4433797909407664
+ - F1: 1.8484349258649095
+ - Iou: 1.722715850194616
+ Class: quadro_aviso
+ - Accuracy: 3.7315396731333035
+ - Precision: 3.6146396408687074
+ - Recall: 4.842438282389329
+ - F1: 4.123145745504154
+ - Iou: 2.465690564128132
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Metric type: class_prediction
+
+ - Accuracy: 93.4362139917695
+ - Precision: 95.28409569674352
+ - Recall: 93.4362139917695
+ - F1: 93.95364054559879
+ - Iou: 76.87152011030561
+ - Total instances gt: 0.0
+ - Total instances pred: 0.0
+
+Classes: 
+
+ Class: __ignore__
+ - Accuracy: 75.08240458998294
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: parede
+ - Accuracy: 96.05058054322416
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: chao
+ - Accuracy: 93.27468338489808
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: armario
+ - Accuracy: 97.77209440665635
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cama
+ - Accuracy: 99.96521245982815
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cadeira
+ - Accuracy: 90.69750101205732
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sofa
+ - Accuracy: 98.86013926087264
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa
+ - Accuracy: 89.44456885681078
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: porta
+ - Accuracy: 91.27459155891508
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: janela
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: estante_livros
+ - Accuracy: 99.92624977919095
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro
+ - Accuracy: 98.99500669547544
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: balcao
+ - Accuracy: 93.12573610763074
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: persianas
+ - Accuracy: 99.10163675595655
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: escrivaninha_carteira
+ - Accuracy: 97.71119957989646
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: prateleira
+ - Accuracy: 89.57533935465906
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: comoda
+ - Accuracy: 99.81379462318202
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: travesseiro
+ - Accuracy: 96.29853601558813
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: espelho
+ - Accuracy: 99.91057019903174
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tapete
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: roupa
+ - Accuracy: 93.64332825516371
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: teto
+ - Accuracy: 90.49296501313025
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: livro
+ - Accuracy: 97.93176695817472
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: geladeira
+ - Accuracy: 96.11496526475975
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: tv
+ - Accuracy: 99.40230685663863
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: papel
+ - Accuracy: 94.88892576855817
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: toalha
+ - Accuracy: 99.23870099423958
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: cortina_chuveiro
+ - Accuracy: 99.83626220479034
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: caixa
+ - Accuracy: 93.35724736212707
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: quadro_aviso
+ - Accuracy: 99.73062000772825
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pessoa
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mesa_cabeceira_cama
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: vaso_sanitario
+ - Accuracy: 99.52832062136146
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: pia
+ - Accuracy: 95.98081193003392
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: lampada
+ - Accuracy: 84.70931554407919
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: banheira
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: sacola_mochila
+ - Accuracy: 99.46225529134016
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+ Class: mean
+ - Accuracy: 100.0
+ - Precision: 0.0
+ - Recall: 0.0
+ - F1: 0.0
+ - Iou: 0.0
+
+----------------------------------------------------------------------
+=======================================================================
